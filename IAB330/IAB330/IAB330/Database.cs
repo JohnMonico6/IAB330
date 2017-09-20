@@ -10,11 +10,13 @@ namespace IAB330
 {
     class Database
     {
-        private SQLiteAsyncConnection con;
+        private SQLiteConnection con;
 
         public Database()
         {
-            //con = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),DependencyService.Get<IFileHelper>().GetLocalPath("database.db"));
+            con = new SQLiteConnection(DependencyService.Get<IFileHelper>().GetLocalPath("database.db"));
+            con.CreateTable<Package>();
+            Console.WriteLine("Hello");
         }
 
         public bool Exists()
@@ -27,7 +29,7 @@ namespace IAB330
         {
             try
             {
-                con.CreateTableAsync<Package>();
+                //con.CreateTableAsync<Package>();
                 return "Created";
             }
             catch (SQLiteException ex)

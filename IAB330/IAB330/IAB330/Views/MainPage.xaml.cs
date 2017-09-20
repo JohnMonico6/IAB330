@@ -16,7 +16,8 @@ namespace IAB330
 
         void AddPackageButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NewPackagePage());
+            //Navigation.PushAsync(new NewPackagePage());
+            new Database();
         }
     }
 }

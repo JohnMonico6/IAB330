@@ -14,8 +14,8 @@ namespace IAB330
 
         public string Destination { get; set; }
 
-        public Byte[] Photograph { get; set; }
+        //public Byte[] Photograph { get; set; } // potentially invalid type
 
-        public List<Item> Items { get; set; }
+        //public List<Item> Items { get; set; } // potentially invalid type
     }
 }
