@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
 
 namespace IAB330.iOS
 {
@@ -23,7 +24,10 @@ namespace IAB330.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new IAB330.App ());
+            DependencyService.Register<FileHelperIos>();
+            //DependencyService.Register<ISQLitePlatform, SQLitePlatformIOS>();
+
+            LoadApplication (new IAB330.App ());
 
 			return base.FinishedLaunching (app, options);
 		}

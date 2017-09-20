@@ -6,6 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
+using IAB330.Android;
+using SQLite.Net.Interop;
+using SQLite.Net.Platform.XamarinAndroid;
 
 namespace IAB330.Droid
 {
@@ -18,7 +22,8 @@ namespace IAB330.Droid
 			ToolbarResource = Resource.Layout.Toolbar; 
 
 			base.OnCreate (bundle);
-
+            DependencyService.Register<FileHelperDroid>();
+            DependencyService.Register<ISQLitePlatform, SQLitePlatformAndroid>();
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new IAB330.App ());
 		}

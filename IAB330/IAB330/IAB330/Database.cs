@@ -1,8 +1,10 @@
 ﻿using SQLite;
+using SQLite.Net.Interop;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Xamarin.Forms;
 
 namespace IAB330
 {
@@ -12,8 +14,7 @@ namespace IAB330
 
         public Database()
         {
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "database.db");
-            con = new SQLiteAsyncConnection(path);
+            //con = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),DependencyService.Get<IFileHelper>().GetLocalPath("database.db"));
         }
 
         public bool Exists()

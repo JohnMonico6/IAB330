@@ -9,6 +9,7 @@
     <Import_RootNamespace>IAB330</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IFileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Package.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database.cs" />
