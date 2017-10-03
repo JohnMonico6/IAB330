@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace WheresMyStuff.Core.ViewModels
+namespace SqliteTutorial.Core.ViewModels
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

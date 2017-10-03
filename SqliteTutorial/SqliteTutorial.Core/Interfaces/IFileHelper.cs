@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WheresMyStuff.Core.Interfaces
+namespace SqliteTutorial.Core.Interfaces
 {
     public interface IFileHelper
     {

@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("WheresMyStuff.Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("SqliteTutorial.Droid.Resource", IsApplication=true)]
 
-namespace WheresMyStuff.Android
+namespace SqliteTutorial.Droid
 {
 	
 	
@@ -26,9 +26,9 @@ namespace WheresMyStuff.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::WheresMyStuff.Android.Resource.String.ApplicationName;
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::WheresMyStuff.Android.Resource.String.Hello;
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::WheresMyStuff.Android.Resource.Attribute.actionBarSize;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::SqliteTutorial.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::SqliteTutorial.Droid.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::SqliteTutorial.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

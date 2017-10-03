@@ -5,11 +5,11 @@ using System.Text;
 
 using Foundation;
 using UIKit;
-using WheresMyStuff.Core;
+using SqliteTutorial.Core;
 using System.IO;
-using WheresMyStuff.Core.Interfaces;
+using SqliteTutorial.Core.Interfaces;
 
-namespace WheresMyStuff.iOS
+namespace SqliteTutorial.iOS
 {
     public class FileHelperIos : IFileHelper
     {

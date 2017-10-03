@@ -1,5 +1,5 @@
-﻿using WheresMyStuff.Core.Database;
-using WheresMyStuff.Core.Models;
+﻿using SqliteTutorial.Core.Database;
+using SqliteTutorial.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WheresMyStuff.Core.ViewModels
+namespace SqliteTutorial.Core.ViewModels
 {
     public class SecondViewModel : ViewModelBase
     {

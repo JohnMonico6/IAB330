@@ -1,7 +1,7 @@
 ﻿using SQLite.Net;
 using SQLite.Net.Interop;
-using WheresMyStuff.Core.Interfaces;
-using WheresMyStuff.Core.Models;
+using SqliteTutorial.Core.Interfaces;
+using SqliteTutorial.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace WheresMyStuff.Core.Database
+namespace SqliteTutorial.Core.Database
 {
     public class MyDatabase
     {

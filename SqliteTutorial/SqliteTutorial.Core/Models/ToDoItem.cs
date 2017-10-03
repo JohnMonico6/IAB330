@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLite.Net.Attributes;
 
-namespace WheresMyStuff.Core.Models
+namespace SqliteTutorial.Core.Models
 {
     public class ToDoItem
     {

@@ -9,10 +9,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using WheresMyStuff.Core.Interfaces;
+using SqliteTutorial.Core.Interfaces;
 using System.IO;
 
-namespace WheresMyStuff.Android
+namespace SqliteTutorial.Droid
 {
     public class FileHelperDroid : IFileHelper
     {
