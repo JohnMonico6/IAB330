@@ -9,13 +9,13 @@ using Android.OS;
 using Xamarin.Forms;
 using SQLite.Net.Platform.XamarinAndroid;
 using SQLite.Net.Interop;
-using SqliteTutorial.Core.Interfaces;
-using SqliteTutorial.Core;
-using SqliteTutorial.Core.ViewModels;
+using WheresMyStuff.Core.Interfaces;
+using WheresMyStuff.Core;
+using WheresMyStuff.Core.ViewModels;
 
-namespace SqliteTutorial.Droid
+namespace WheresMyStuff.Android
 {
-    [Activity(Label = "SqliteTutorial", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "WheresMyStuff", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

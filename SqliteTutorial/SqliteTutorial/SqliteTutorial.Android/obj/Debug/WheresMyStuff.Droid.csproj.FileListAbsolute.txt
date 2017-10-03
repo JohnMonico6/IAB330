@@ -1,0 +1,4 @@
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\WheresMyStuff.Droid.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\WheresMyStuff.Droid.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\SqliteTutorial.Android.dll
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\SqliteTutorial.Android.pdb

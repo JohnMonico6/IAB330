@@ -5,11 +5,11 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
-using SqliteTutorial.Core;
+using WheresMyStuff.Core;
 using SQLite.Net.Interop;
 using SQLite.Net.Platform.XamarinIOS;
 
-namespace SqliteTutorial.iOS
+namespace WheresMyStuff.iOS
 {
     public class Application
     {

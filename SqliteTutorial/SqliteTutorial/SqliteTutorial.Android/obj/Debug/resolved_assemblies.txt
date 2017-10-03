@@ -21,8 +21,8 @@ C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\Sqli
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\System.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\System.Xml.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\System.Xml.Linq.dll
-C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\SqliteTutorial.Core.dll
-C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\SqliteTutorial.dll
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\WheresMyStuff.Core.dll
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\WheresMyStuff.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\System.Runtime.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\SqliteTutorial\SqliteTutorial\SqliteTutorial.Android\obj\Debug\android\assets\System.Collections.dll

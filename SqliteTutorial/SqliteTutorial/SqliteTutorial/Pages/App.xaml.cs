@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace SqliteTutorial
+namespace WheresMyStuff
 {
     public partial class App : Application
     {

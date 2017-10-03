@@ -1,7 +1,7 @@
 ﻿using SQLite.Net;
-using SqliteTutorial.Core.Database;
-using SqliteTutorial.Core.Interfaces;
-using SqliteTutorial.Core.Models;
+using WheresMyStuff.Core.Database;
+using WheresMyStuff.Core.Interfaces;
+using WheresMyStuff.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace SqliteTutorial.Core.ViewModels
+namespace WheresMyStuff.Core.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {

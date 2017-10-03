@@ -4,10 +4,10 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
-using SqliteTutorial.Core.Interfaces;
-using SqliteTutorial.Core;
+using WheresMyStuff.Core.Interfaces;
+using WheresMyStuff.Core;
 
-namespace SqliteTutorial.iOS
+namespace WheresMyStuff.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
