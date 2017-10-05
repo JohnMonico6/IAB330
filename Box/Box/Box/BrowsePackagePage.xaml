@@ -2,9 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteTutorial.BrowsePackagePage">
-    <ContentPage.Content>
+
+    <StackLayout>
         <StackLayout>
-            <Label Text="Browse Packages Page" />
+            <!--Need to implement all search areas into separate page/popup-->
+            <SearchBar Placeholder="Search Here" TextChanged="SearchBar_TextChanged"></SearchBar>
         </StackLayout>
-    </ContentPage.Content>
+        <!--Each of the list items needs a context action/itemselected event that links to the individual items page-->
+        <ListView ItemsSource="{Binding packageList}" x:Name="PackageListView" ItemTapped="PackageListView_ItemTapped" SeparatorVisibility="Default" RowHeight="75">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Margin="20,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding PackageName}" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Destination}" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
