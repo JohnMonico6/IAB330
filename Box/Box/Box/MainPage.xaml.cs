@@ -21,5 +21,25 @@ namespace SqliteTutorial
         {
             Navigation.PushAsync(new SecondPage());
         }
+
+        private void AddPackageButton_Clicked(object sender, EventArgs e) {
+
+            Navigation.PushAsync(new AddPackagePage());
+        }
+
+        private void BrowsePackageButton_Clicked(object sender, EventArgs e) {
+
+            Navigation.PushAsync(new BrowsePackagePage());
+        }
+
+        private void QRScannerButton_Clicked(object sender, EventArgs e) {
+
+            Navigation.PushAsync(new QRScannerPage());
+        }
+
+        private void ExportDatabaseButton_Clicked(object sender, EventArgs e) {
+
+            Navigation.PushAsync(new ExportDatabasePage());
+        }
     }
 }

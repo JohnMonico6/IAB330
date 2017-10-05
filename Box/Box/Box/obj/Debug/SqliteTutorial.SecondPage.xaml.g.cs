@@ -11,8 +11,8 @@
 namespace SqliteTutorial {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Robert\\Source\\Repos\\IAB330\\Box\\SqliteTutorial\\SqliteTutorial\\SecondPage." +
-        "xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Desktop\\University\\Uni 2017 Sem2\\Mobile Dev\\Assignment Two\\IAB330\\Box\\Box\\Box\\" +
+        "SecondPage.xaml")]
     public partial class SecondPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

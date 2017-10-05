@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteTutorial.AddPackagePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10" Spacing="5">
+                <Label Text="Package Name" />
+                <Entry x:Name="PackageNameEntry" AutomationId="PackageNameEntry" Text=""/>
+            
+                <Label Text="Destination"/>
+                <Entry x:Name="DestinationEntry" AutomationId="DestinationEntry" Text=""/>
+
+                <Label Text="Photograph"/>
+                <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">
+                    <Button x:Name="PhotoFileButton" Text="File"/>
+                    <Label Text="or" VerticalTextAlignment="Center"/>
+                    <Button x:Name="PhotoCameraButton" Text="Camera"/>
+                </StackLayout>
+
+                <Label Text="Package Contains"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Entry x:Name="NewItemEntry" AutomationId="NewItemEntry" Text="" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="RemoveItemButton" AutomationId="RemoveItemButton" Text="-"/>
+                </StackLayout>
+                <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item"/>
+                <Button x:Name="SubmitPackageButton" AutomationId="SubmitPackageButton" Text="Submit" Margin="0,20,0,0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

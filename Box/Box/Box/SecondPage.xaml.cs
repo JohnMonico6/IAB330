@@ -19,7 +19,5 @@ namespace SqliteTutorial
             InitializeComponent();
             BindingContext = new SecondViewModel();
         }
-
-
     }
 }
