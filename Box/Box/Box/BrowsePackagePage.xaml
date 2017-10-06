@@ -10,7 +10,8 @@
             <SearchBar Placeholder="Search Here" TextChanged="SearchBar_TextChanged"></SearchBar>
         </StackLayout>
         <!--Each of the list items needs a context action/itemselected event that links to the individual items page-->
-        <ListView ItemsSource="{Binding packageList}" x:Name="PackageListView" ItemTapped="PackageListView_ItemTapped" SeparatorVisibility="Default" RowHeight="75">
+        <ListView ItemsSource="{Binding packageList}" x:Name="PackageListView" ItemTapped="PackageListView_ItemTapped" 
+                  SeparatorVisibility="Default" RowHeight="75">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

@@ -62,3 +62,4 @@ F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box
 F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.dll
 F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.pdb
 F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.PackagePage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.TransferItemPage.xaml.g.cs
