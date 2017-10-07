@@ -14,7 +14,7 @@ namespace SqliteTutorial {
     public partial class BrowsePackagePage : ContentPage {
         public BrowsePackagePage() {
             InitializeComponent();
-            BindingContext = new BrowsePackageVM();
+            //BindingContext = new BrowsePackageVM();
         }
     }
 
