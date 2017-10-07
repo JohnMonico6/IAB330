@@ -1,4 +1,5 @@
-﻿using SqliteTutorial.Core.ViewModels;
+﻿using SqliteTutorial.Core.Models;
+using SqliteTutorial.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,15 @@ namespace SqliteTutorial {
         public BrowsePackagePage() {
             InitializeComponent();
             BindingContext = new BrowsePackageVM();
+        }
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var package = e.SelectedItem as Package;
+            var packagePage = new PackagePage
+            {
+                BindingContext = package
+            };
+            Navigation.PushAsync(packagePage);
         }
     }
 
