@@ -11,17 +11,21 @@
 namespace SqliteTutorial {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Jason\\Desktop\\Mobile\\Assignment\\repo\\IAB330\\Box\\Box\\Box\\BrowsePackagePag" +
-        "e.xaml")]
-    public partial class BrowsePackagePage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Desktop\\University\\Uni 2017 Sem2\\Mobile Dev\\Assignment Two\\IAB330\\Box\\Box\\Box\\" +
+        "TransferItemPage.xaml")]
+    public partial class TransferItemPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView PackageListView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button TransferPackageButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(BrowsePackagePage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TransferItemPage));
             PackageListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "PackageListView");
+            TransferPackageButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "TransferPackageButton");
         }
     }
 }

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteTutorial.PackagePage"
+             Title="Package Page"> <!--Binding for Package name?-->
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20,10">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Label Text="Desination" HorizontalOptions="StartAndExpand" Font="20" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                    <Button x:Name="EditDestinationButton" AutomationId="EditDestinationButton" Text="Edit Dest." 
+                            HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  Clicked="EditDestinationButton_Clicked" />
+                </StackLayout>
+                <Label Text="Binding for Package Destination Here"/> <!--binding for Package Desination-->
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0,10,0,0">
+                    <Label Text="Photograph" HorizontalOptions="StartAndExpand" Font="20" FontAttributes="Bold" 
+                           VerticalOptions="CenterAndExpand"/>
+                    <Button x:Name="EditPhotographButton" AutomationId="EditPhotographButton" Text="Edit Photo" 
+                            HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Clicked="EditPhotographButton_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Image Source="http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg" 
+                           Margin="20,0" WidthRequest="150" HeightRequest="150"></Image>
+                    <Label Text="Click to Enlarge" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <Button x:Name="GenerateLabelButton" AutomationId="GenerateLabelButton" Text="Generate Label" Clicked="GenerateLabelButton_Clicked" 
+                        HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Label Text="Contains" Font="20" FontAttributes="Bold" />
+            </StackLayout>
+            <ListView  x:Name="ItemsListView" ItemTapped="ItemsListView_ItemTapped" SeparatorVisibility="Default" RowHeight="50"> <!--Binding for Package Items-->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Margin="10,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/> <!--Binding Item Name Here-->
+                                    <Button x:Name="MoveItemButton" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"/>
+                                    <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
