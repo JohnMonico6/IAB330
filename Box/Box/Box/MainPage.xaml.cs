@@ -39,7 +39,7 @@ namespace SqliteTutorial
 
         private void ExportDatabaseButton_Clicked(object sender, EventArgs e) {
 
-            Navigation.PushAsync(new PackagePage());
+            //Navigation.PushAsync(new PackagePage());
         }
 
     }

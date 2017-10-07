@@ -20,11 +20,12 @@ namespace SqliteTutorial {
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var package = e.SelectedItem as Package;
-            var packagePage = new PackagePage
+            var pvm = new PackagePageVM(package);
+            var page = new PackagePage()
             {
-                BindingContext = package
+                BindingContext = pvm
             };
-            Navigation.PushAsync(packagePage);
+            Navigation.PushAsync(page);
         }
     }
 

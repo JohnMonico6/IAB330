@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite.Net.Attributes;
+using System.Collections.ObjectModel;
+using SqliteTutorial.Core.ViewModels;
 
 namespace SqliteTutorial.Core.Models
 {

@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteTutorial.PackagePage"
-             Title="Package Page"> <!--Binding for Package name?-->
-    
+             Title="{Binding Name}">
+
     <ContentPage.Content>
         <StackLayout Margin="20,10">
             <StackLayout>
@@ -12,7 +12,7 @@
                     <Button x:Name="EditDestinationButton" AutomationId="EditDestinationButton" Text="Edit Dest." 
                             HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  Clicked="EditDestinationButton_Clicked" />
                 </StackLayout>
-                <Label Text="{Binding Room}"/> <!--binding for Package Desination-->
+                <Label Text="{Binding Room}"/>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0,10,0,0">
                     <Label Text="Photograph" HorizontalOptions="StartAndExpand" Font="20" FontAttributes="Bold" 
                            VerticalOptions="CenterAndExpand"/>
@@ -28,15 +28,16 @@
                         HorizontalOptions="Center" Margin="0,10,0,0"/>
                 <Label Text="Contains" Font="20" FontAttributes="Bold" />
             </StackLayout>
-            <ListView  x:Name="ItemsListView" ItemTapped="ItemsListView_ItemTapped" SeparatorVisibility="Default" RowHeight="50"> <!--Binding for Package Items-->
+            <ListView  x:Name="ItemsListView" ItemTapped="ItemsListView_ItemTapped" SeparatorVisibility="Default" RowHeight="50" ItemsSource="{Binding ItemList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Margin="10,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
-                                    <Label Text="" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/> <!--Binding Item Name Here-->
-                                    <Button x:Name="MoveItemButton" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"/>
-                                    <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"/>
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                                    <!-- Needs some reformatting, can't see the items properly because the buttons squish up -->
+                                    <!-- <Button x:Name="MoveItemButton" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"/>
+                                    <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"/> -->
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
