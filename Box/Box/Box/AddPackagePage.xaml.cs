@@ -16,7 +16,7 @@ namespace SqliteTutorial {
         public AddPackagePage() {
 
             InitializeComponent();
-            BindingContext = new AppPackageVM();
+            BindingContext = new AddPackageVM();
         }
 
         public void AddButton_Clicked(object sender, EventArgs e)

@@ -23,7 +23,8 @@
                     <Entry x:Name="NewItemEntry" AutomationId="NewItemEntry" Text="" HorizontalOptions="FillAndExpand"/>
                     <Button x:Name="RemoveItemButton" AutomationId="RemoveItemButton" Text="-"/>
                 </StackLayout>
-                <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item"/>
+
+                <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item" Command="{Binding AddItemCommand}"/>
                 <Button x:Name="SubmitPackageButton" AutomationId="SubmitPackageButton" Text="Submit" Command="{Binding SubmitCommand}" Margin="0,20,0,0"/>
             </StackLayout>
         </ScrollView>
