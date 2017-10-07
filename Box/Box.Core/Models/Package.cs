@@ -17,7 +17,7 @@ namespace SqliteTutorial.Core.Models
         public string Room { get; set; }
         public List<string> GetItemList()
         {
-            return null;
+            return null; // sup
         }
         public void SetItemList(List<string> items)
         {
