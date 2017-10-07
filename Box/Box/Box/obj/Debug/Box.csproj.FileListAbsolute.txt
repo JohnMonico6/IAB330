@@ -85,3 +85,6 @@ C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\Sqlit
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.ExportDatabasePage.xaml.g.cs
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.pdb
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\bin\Debug\Mono.Android.dll
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\bin\Debug\Mono.Android.pdb
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\bin\Debug\Mono.Android.xml

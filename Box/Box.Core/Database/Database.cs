@@ -11,6 +11,17 @@ using Xamarin.Forms;
 
 namespace SqliteTutorial.Core.Database
 {
+    public class PackageDatabase
+    {
+        private SQLiteConnection connection;
+        public PackageDatabase()
+        {
+            connection = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),
+                DependencyService.Get<IFileHelper>().GetLocalPath("Packages.db3"));
+        }
+    }
+
+    // TODO: Remove prac code
     public class MyDatabase
     {
         static SQLiteConnection database;

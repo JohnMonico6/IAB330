@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SqliteTutorial.Core.Database;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -19,6 +21,7 @@ namespace SqliteTutorial
         protected override void OnStart()
         {
             // Handle when your app starts
+            var d = new PackageDatabase();
         }
 
         protected override void OnSleep()
