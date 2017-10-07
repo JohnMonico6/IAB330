@@ -18,14 +18,8 @@ namespace SqliteTutorial.Core.Database
         {
             database = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),
                 DependencyService.Get<IFileHelper>().GetLocalPath("Packages.db3"));
-            Generate();
-            var p = new Package
-            {
-                Name = "Item",
-                Room = "Room",
-                Items = "Items"
-            };
-            database.Insert(p);
+            //database.DropTable<Package>();
+            database.CreateTable<Package>();
         }
 
         public List<Package> GetPackages()
@@ -33,10 +27,12 @@ namespace SqliteTutorial.Core.Database
             return database.Table<Package>().ToList();
         }
 
-        public void Generate()
+        public void Insert(Package package)
         {
-            database.CreateTable<Package>();
+            database.Insert(package);
+            database.Commit();
         }
+
     }
 
     // TODO: Remove prac code
