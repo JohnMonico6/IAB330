@@ -14,6 +14,7 @@ namespace SqliteTutorial.Core.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Items { get; set; } // Serialized CSV
+        public string Room { get; set; }
         public List<string> GetItemList()
         {
             return null;
