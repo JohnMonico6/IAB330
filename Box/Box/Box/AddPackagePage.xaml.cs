@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqliteTutorial.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace SqliteTutorial {
         public AddPackagePage() {
 
             InitializeComponent();
+            BindingContext = new AppPackageVM();
+        }
+
+        public void AddButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
