@@ -27,7 +27,7 @@ namespace SqliteTutorial.Core.Models
                     items.Add(new Item(tempList[x - 1], Int32.Parse(tempList[x])));
                 }
             }
-            return null; // sup
+            return items;
         }
         public void SetItemList(List<Item> items)
         {
