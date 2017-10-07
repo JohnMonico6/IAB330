@@ -5,38 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using SqliteTutorial.Core.Models;
+using SqliteTutorial.Core.Database;
 
 namespace SqliteTutorial.Core.ViewModels
 {
     public class BrowsePackageVM : ViewModelBase
     {
-        public ObservableCollection<Package> Packages
-        {
-            get
-            {
-                var oc = new ObservableCollection<Package>();
-                oc.Add(new Package
-                {
-                    Name = "Name1",
-                    Room = "Room",
-                    Items = "Items"
-                });
-                oc.Add(new Package
-                {
-                    Name = "Name2",
-                    Room = "Room",
-                    Items = "Items"
-                });
-                return oc;
-            }
-            set
-            {
-            }
-        }
+        private readonly PackageDatabase db;
+        public ObservableCollection<Package> Packages { get; set; }
 
         public BrowsePackageVM()
         {
-            // TODO: Get packages here, store them in the variable Packages
+            db = new PackageDatabase();
+            Packages = new ObservableCollection<Package>(db.GetPackages());
         }
     }
 }

@@ -10,7 +10,7 @@ namespace SqliteTutorial.Core.Models
     {
         public string Name { get; set; }
         public int Quantity { get; set; }
-        public Item (string Name, int Quantity)
+        public Item(string Name, int Quantity)
         {
             this.Name = Name;
             this.Quantity = Quantity;

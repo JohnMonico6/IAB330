@@ -13,11 +13,29 @@ namespace SqliteTutorial.Core.Database
 {
     public class PackageDatabase
     {
-        private SQLiteConnection connection;
+        private SQLiteConnection database;
         public PackageDatabase()
         {
-            connection = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),
+            database = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),
                 DependencyService.Get<IFileHelper>().GetLocalPath("Packages.db3"));
+            Generate();
+            var p = new Package
+            {
+                Name = "Item",
+                Room = "Room",
+                Items = "Items"
+            };
+            database.Insert(p);
+        }
+
+        public List<Package> GetPackages()
+        {
+            return database.Table<Package>().ToList();
+        }
+
+        public void Generate()
+        {
+            database.CreateTable<Package>();
         }
     }
 

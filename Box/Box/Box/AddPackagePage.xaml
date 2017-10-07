@@ -6,10 +6,10 @@
         <ScrollView>
             <StackLayout Margin="10" Spacing="5">
                 <Label Text="Package Name" />
-                <Entry x:Name="PackageNameEntry" AutomationId="PackageNameEntry" Text=""/>
+                <Entry x:Name="PackageNameEntry" AutomationId="PackageNameEntry" Text="{Binding Name}"/>
             
                 <Label Text="Destination"/>
-                <Entry x:Name="DestinationEntry" AutomationId="DestinationEntry" Text=""/>
+                <Entry x:Name="DestinationEntry" AutomationId="DestinationEntry" Text="{Binding Room}"/>
 
                 <Label Text="Photograph"/>
                 <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">
