@@ -2,9 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteTutorial.BrowsePackagePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Browse Packages Page" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ListView ItemsSource="{Binding Packages}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal" Padding="10,0">
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Room}"/>
+                                <Label Text="{Binding Items}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

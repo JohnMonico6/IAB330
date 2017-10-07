@@ -11,8 +11,8 @@
 namespace SqliteTutorial {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Desktop\\University\\Uni 2017 Sem2\\Mobile Dev\\Assignment Two\\IAB330\\Box\\Box\\Box\\" +
-        "BrowsePackagePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Jason\\Desktop\\Mobile\\Assignment\\repo\\IAB330\\Box\\Box\\Box\\BrowsePackagePag" +
+        "e.xaml")]
     public partial class BrowsePackagePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
