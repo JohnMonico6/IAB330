@@ -20,7 +20,7 @@ namespace SqliteTutorial {
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var package = e.SelectedItem as Package;
-            var pvm = new PackagePageVM(package);
+            var pvm = new PackagePageVM(Navigation, package);
             var page = new PackagePage()
             {
                 BindingContext = pvm

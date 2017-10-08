@@ -18,20 +18,15 @@ namespace SqliteTutorial.Core.ViewModels
 
         public Item SelectedItem { get; set; }
         public ObservableCollection<Item> Items { get; set; }
-        public ICommand GenerateLabelCommand { protected set; get; }
-        public INavigation Navigation { get; set; }
 
-        public BrowsePackageVM(INavigation navigation)
+
+        public BrowsePackageVM()
         {
-            this.Navigation = navigation;
-            this.GenerateLabelCommand = new Command(async () => await GenerateLabel());
+
             db = new PackageDatabase();
             Packages = new ObservableCollection<Package>(db.GetPackages());
             //GenerateLabelCommand = new Command(GenerateLabel);
         }
-        public async Task GenerateLabel()
-        {
-            await Navigation.PushAsync(new Page());
-        }
+
     }
 }
