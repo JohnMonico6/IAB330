@@ -12,7 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace SqliteTutorial {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class BrowsePackagePage : ContentPage {
+
         public BrowsePackagePage() {
             InitializeComponent();
             BindingContext = new BrowsePackageVM();
@@ -26,6 +28,23 @@ namespace SqliteTutorial {
                 BindingContext = pvm
             };
             Navigation.PushAsync(page);
+        }
+
+        //This probably needs to be setup through MVVM but I think it might require some restructuring
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e) {
+
+            var source = BindingContext as BrowsePackageVM;
+
+            PackagesListView.BeginRefresh();
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue)) {
+                PackagesListView.ItemsSource = source.Packages;
+            } else {
+                PackagesListView.ItemsSource = source.Packages.Where(i => i.Name.Contains(e.NewTextValue) || 
+                i.Room.Contains(e.NewTextValue) || i.Items.Contains(e.NewTextValue));
+            }
+
+            PackagesListView.EndRefresh();
         }
     }
 
