@@ -46,6 +46,7 @@
     <Compile Include="ViewModels\BrowsePackageVM.cs" />
     <Compile Include="ViewModels\PackagePageVM.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
+    <Compile Include="ViewModels\ViewLabelVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">

@@ -16,6 +16,7 @@ namespace SqliteTutorial {
 
         public PackagePage() {
             InitializeComponent();
+            BindingContext = new LocalAccountViewModel(Navigation);
         }
 
         private void EditDestinationButton_Clicked(object sender, EventArgs e) {

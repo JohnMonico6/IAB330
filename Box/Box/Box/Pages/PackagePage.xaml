@@ -24,7 +24,7 @@
                            Margin="20,0" WidthRequest="150" HeightRequest="150"></Image>
                     <Label Text="Click to Enlarge" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
                 </StackLayout>
-                <Button x:Name="GenerateLabelButton" AutomationId="GenerateLabelButton" Text="Generate Label" Clicked="GenerateLabelButton_Clicked" 
+                <Button x:Name="GenerateLabelButton" AutomationId="GenerateLabelButton" Text="Generate Label" Command="{Binding GenerateLabelCommand}"
                         HorizontalOptions="Center" Margin="0,10,0,0"/>
                 <Label Text="Contains" Font="20" FontAttributes="Bold" />
             </StackLayout>

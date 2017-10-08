@@ -50,6 +50,9 @@
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PackageLabel.xaml.cs">
+      <DependentUpon>PackageLabel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PackagePage.xaml.cs">
       <DependentUpon>PackagePage.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\TransferItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PackageLabel.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
