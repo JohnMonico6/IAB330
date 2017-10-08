@@ -25,22 +25,24 @@
                     <Entry x:Name="NewItemEntry" AutomationId="NewItemEntry" Text="{Binding ItemName, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
                     <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item" Command="{Binding AddItemCommand}"/>
                 </StackLayout>
-                <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
-                    <!--="ListView_ItemSelected"-->
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout Orientation="Horizontal" Padding="10,0">
-                                        <StackLayout HorizontalOptions="StartAndExpand">
-                                            <Label Text="{Binding Name}"/>
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                        <!--="ListView_ItemSelected"-->
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout Orientation="Horizontal" Margin="10,0">
+                                            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                                <Label Text="{Binding Name}"/>
+                                            </StackLayout>
                                         </StackLayout>
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
                 <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="Delete Item" Command="{Binding DeleteItemCommand}"/>
                 <Button x:Name="SubmitPackageButton" AutomationId="SubmitPackageButton" Text="Submit" Command="{Binding SubmitCommand}" Margin="0,20,0,0"/>
             </StackLayout>

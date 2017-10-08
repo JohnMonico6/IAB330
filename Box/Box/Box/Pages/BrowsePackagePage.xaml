@@ -3,17 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteTutorial.BrowsePackagePage"
              Title="Your Packages">
-    <StackLayout>
+    <StackLayout Margin="15,10">
         <SearchBar Placeholder="Search Here" TextChanged="SearchBar_TextChanged"></SearchBar>
         <ListView x:Name="PackagesListView" ItemsSource="{Binding Packages}" ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Orientation="Horizontal" Padding="10,0">
+                            <StackLayout Orientation="Horizontal" >
                                 <StackLayout HorizontalOptions="StartAndExpand">
                                     <Label Text="{Binding Name}" FontAttributes="Bold"/>
-                                    <Label Text="{Binding Room}"/>
+                                    <Label Text="{Binding Room}" Margin="10,0"/>
                                     <Label Text="{Binding Items}"/>
                                 </StackLayout>
                             </StackLayout>

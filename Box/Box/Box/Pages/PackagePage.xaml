@@ -5,6 +5,7 @@
              Title="{Binding Name}">
 
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout Margin="20,10">
             <StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
@@ -15,13 +16,13 @@
                 <Label Text="{Binding Room}"/>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0,10,0,0">
                     <Label Text="Photograph" HorizontalOptions="StartAndExpand" Font="20" FontAttributes="Bold" 
-                           VerticalOptions="CenterAndExpand"/>
+                            VerticalOptions="CenterAndExpand"/>
                     <Button x:Name="EditPhotographButton" AutomationId="EditPhotographButton" Text="Edit Photo" 
                             HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Clicked="EditPhotographButton_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
                     <Image Source="http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg" 
-                           Margin="20,0" WidthRequest="150" HeightRequest="150"></Image>
+                            Margin="20,0" WidthRequest="150" HeightRequest="150"></Image>
                     <Label Text="Click to Enlarge" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
                 </StackLayout>
                 <Button x:Name="GenerateLabelButton" AutomationId="GenerateLabelButton" Text="Generate Label" Clicked="GenerateLabelButton_Clicked" 
@@ -33,17 +34,24 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout Margin="10,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
-                                    <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
-                                    <!-- Needs some reformatting, can't see the items properly because the buttons squish up -->
-                                    <Button x:Name="MoveItemButton" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"/>
-                                    <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"/> 
-                                </StackLayout>
+                                <Grid Margin="10,0" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="40"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}" Grid.Column="0" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                                    <Button x:Name="MoveItemButton" Grid.Column="1" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"
+                                            HorizontalOptions="EndAndExpand"  WidthRequest="40" HeightRequest="40" />
+                                    <Button x:Name="DeleteItemButton" Grid.Column="2" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"
+                                            HorizontalOptions="EndAndExpand" WidthRequest="40" HeightRequest="40"/> 
+                                </Grid>
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
