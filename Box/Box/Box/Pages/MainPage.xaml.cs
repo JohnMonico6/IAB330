@@ -14,7 +14,6 @@ namespace SqliteTutorial
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MainViewModel();
         }
 
         private void SubmitButton_Clicked(object sender, EventArgs e)

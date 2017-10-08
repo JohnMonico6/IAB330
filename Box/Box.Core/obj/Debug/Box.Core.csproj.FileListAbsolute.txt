@@ -13,6 +13,10 @@ C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial.Core\obj\Debug\Box.Core.c
 C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial.Core\obj\Debug\Box.Core.csproj.CoreCompileInputs.cache
 C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial.Core\obj\Debug\SqliteTutorial.Core.dll
 C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial.Core\obj\Debug\SqliteTutorial.Core.pdb
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\Box.Core.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\Box.Core.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.dll
+C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.pdb
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\SqliteTutorial.Core.dll
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\SqliteTutorial.Core.pdb
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\SQLite.Net.dll
@@ -24,7 +28,3 @@ C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\Xama
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\Box.Core.csprojResolveAssemblyReference.cache
-C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\Box.Core.csproj.CoreCompileInputs.cache
-C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.dll
-C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.pdb

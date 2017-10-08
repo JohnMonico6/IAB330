@@ -35,37 +35,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AddPackagePage.xaml.cs">
+    <Compile Include="Pages\AddPackagePage.xaml.cs">
       <DependentUpon>AddPackagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BrowsePackagePage.xaml.cs">
+    <Compile Include="Pages\BrowsePackagePage.xaml.cs">
       <DependentUpon>BrowsePackagePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ExportDatabasePage.xaml.cs">
+    <Compile Include="Pages\ExportDatabasePage.xaml.cs">
       <DependentUpon>ExportDatabasePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PackagePage.xaml.cs">
+    <Compile Include="Pages\PackagePage.xaml.cs">
       <DependentUpon>PackagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QRScannerPage.xaml.cs">
+    <Compile Include="Pages\QRScannerPage.xaml.cs">
       <DependentUpon>QRScannerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SecondPage.xaml.cs">
+    <Compile Include="tobedeleted\SecondPage.xaml.cs">
       <DependentUpon>SecondPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TransferItemPage.xaml.cs">
+    <Compile Include="Pages\TransferItemPage.xaml.cs">
       <DependentUpon>TransferItemPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
+    <EmbeddedResource Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -81,7 +81,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SecondPage.xaml">
+    <EmbeddedResource Include="tobedeleted\SecondPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -104,37 +104,37 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddPackagePage.xaml">
+    <EmbeddedResource Include="Pages\AddPackagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BrowsePackagePage.xaml">
+    <EmbeddedResource Include="Pages\BrowsePackagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="QRScannerPage.xaml">
+    <EmbeddedResource Include="Pages\QRScannerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ExportDatabasePage.xaml">
+    <EmbeddedResource Include="Pages\ExportDatabasePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PackagePage.xaml">
+    <EmbeddedResource Include="Pages\PackagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TransferItemPage.xaml">
+    <EmbeddedResource Include="Pages\TransferItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -11,13 +11,13 @@
 namespace SqliteTutorial {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("F:\\Desktop\\University\\Uni 2017 Sem2\\Mobile Dev\\Assignment Two\\IAB330\\Box\\Box\\Box\\" +
-        "ExportDatabasePage.xaml")]
-    public partial class ExportDatabasePage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Jason\\Desktop\\Mobile\\Assignment\\repo\\IAB330\\Box\\Box\\Box\\MainPages\\Browse" +
+        "PackagePage.xaml")]
+    public partial class BrowsePackagePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ExportDatabasePage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(BrowsePackagePage));
         }
     }
 }

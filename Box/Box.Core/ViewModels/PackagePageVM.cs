@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace SqliteTutorial.Core.ViewModels
 {
+    /// <summary>
+    /// <code>PackagePageVM(Package p)</code>
+    /// Binds to PackagePage.
+    /// </summary>
     public class PackagePageVM : ViewModelBase
     {
         public string Name { get; set; }
@@ -15,10 +19,11 @@ namespace SqliteTutorial.Core.ViewModels
         public ObservableCollection<Item> ItemList { get; set; }
         public PackagePageVM(Package p)
         {
-            Name = "Test Package";
-            Room = "Test Room";
+            Name = p.Name;
+            Room = p.Room;
             ItemList = new ObservableCollection<Item>();
-            ItemList.Add(new Item("Item Name", 0));
+            //ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
+            ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
         }
     }
 }
