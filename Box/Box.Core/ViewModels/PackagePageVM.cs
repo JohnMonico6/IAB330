@@ -26,16 +26,21 @@ namespace SqliteTutorial.Core.ViewModels
         public PackagePageVM(INavigation navigation, Package p)
         {
             this.Navigation = navigation;
-            this.GenerateLabelCommand = new Command(async () => await GenerateLabel());
+            this.GenerateLabelCommand = new Command(async () => await GenerateLabel(p));
             Name = p.Name;
             Room = p.Room;
             //ItemList = new ObservableCollection<Item>();
             ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
             //ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
         }
-        public async Task GenerateLabel()
+        public async Task GenerateLabel(Package p)
         {
-            await Navigation.PushAsync(new PackageLabel());
+            var pvm = new ViewLabelVM(Navigation, p);
+            var page = new LabelPage()
+            {
+                BindingContext = pvm
+            };
+            await Navigation.PushAsync(page);
         }
     }
 }

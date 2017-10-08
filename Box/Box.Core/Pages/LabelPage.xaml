@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteTutorial.LabelPage"
+             Title="{Binding Name}">
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,10">
+            <StackLayout>
+                <Label Text="{Binding Label}" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Button x:Name="EditDestinationButton" AutomationId="EditDestinationButton" Text="Print Label." 
+                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
