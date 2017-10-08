@@ -23,10 +23,23 @@
                 <Label Text="Package Contains"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Entry x:Name="NewItemEntry" AutomationId="NewItemEntry" Text="" HorizontalOptions="FillAndExpand"/>
-                    <Button x:Name="RemoveItemButton" AutomationId="RemoveItemButton" Text="-"/>
+                    <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item" Command="{Binding AddItemCommand}"/>
                 </StackLayout>
-
-                <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item" Command="{Binding AddItemCommand}"/>
+                <ListView ItemsSource="{Binding Items}" ItemSelected="ListView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Orientation="Horizontal" Padding="10,0">
+                                        <StackLayout HorizontalOptions="StartAndExpand">
+                                            <Label Text="{Binding Name}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
                 <Button x:Name="SubmitPackageButton" AutomationId="SubmitPackageButton" Text="Submit" Command="{Binding SubmitCommand}" Margin="0,20,0,0"/>
             </StackLayout>
         </ScrollView>

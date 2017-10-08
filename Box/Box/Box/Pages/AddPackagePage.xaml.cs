@@ -21,6 +21,10 @@ namespace SqliteTutorial {
 
         public void AddButton_Clicked(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e) {
 
         }
     }
