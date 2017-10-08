@@ -21,9 +21,9 @@ namespace SqliteTutorial.Core.ViewModels
         {
             Name = p.Name;
             Room = p.Room;
-            ItemList = new ObservableCollection<Item>();
-            //ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
-            ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
+            //ItemList = new ObservableCollection<Item>();
+            ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
+            //ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
         }
     }
 }

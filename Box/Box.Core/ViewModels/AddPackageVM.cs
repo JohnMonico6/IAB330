@@ -16,13 +16,41 @@ namespace SqliteTutorial.Core.ViewModels
 
         private readonly PackageDatabase db;
 
-        public string Name { get; set; }
-        public string Room { get; set; }
-
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
+        private string room;
+        public string Room
+        {
+            get { return room; }
+            set
+            {
+                room = value;
+                OnPropertyChanged();
+            }
+        }
+        private string itemName;
+        public string ItemName
+        {
+            get { return itemName; }
+            set
+            {
+                itemName = value;
+                OnPropertyChanged();
+            }
+        }
+        public Item SelectedItem { get; set; }
         public ObservableCollection<Item> Items { get; set; }
-
         public ICommand SubmitCommand { protected set; get; }
         public ICommand AddItemCommand { protected set; get; }
+        public ICommand DeleteItemCommand { protected set; get; }
 
         public AddPackageVM()
         {
@@ -30,20 +58,33 @@ namespace SqliteTutorial.Core.ViewModels
             Items = new ObservableCollection<Item>();
             SubmitCommand = new Command(Submit);
             AddItemCommand = new Command(AddItem);
+            DeleteItemCommand = new Command(DeleteItem);
+        }
+
+        public void DeleteItem()
+        {
+            if (SelectedItem != null)
+            {
+                Items.Remove(SelectedItem);
+            }
         }
 
         public void AddItem()
         {
-            Items.Add(new Item("",0));
+            Items.Add(new Item(ItemName, 0));
+            ItemName = String.Empty;
         }
 
         public void Submit()
         {
-            db.Insert(new Package()
+            var p = new Package()
             {
                 Name = Name,
                 Room = Room
-            });
+            };
+            p.SetItemList(new List<Item>(Items));
+            db.Insert(p);
+            Items.Clear();
             Name = String.Empty;
             Room = String.Empty;
         }
