@@ -33,11 +33,11 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout Margin="10,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                <StackLayout Margin="10,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
                                     <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
                                     <!-- Needs some reformatting, can't see the items properly because the buttons squish up -->
-                                    <!-- <Button x:Name="MoveItemButton" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"/>
-                                    <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"/> -->
+                                    <Button x:Name="MoveItemButton" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"/>
+                                    <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"/> 
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
