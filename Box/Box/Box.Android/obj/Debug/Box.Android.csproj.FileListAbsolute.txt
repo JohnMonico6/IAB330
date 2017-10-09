@@ -216,13 +216,3 @@ E:\IAB330\Box\Box\Box.Android\obj\Debug\res\layout\toolbar.xml
 E:\IAB330\Box\Box\Box.Android\obj\Debug\res\values\styles.xml
 E:\IAB330\Box\Box\Box.Android\obj\Debug\R.cs.flag
 E:\IAB330\Box\Box\Box.Android\obj\Debug\uploadflags.txt
-E:\IAB330\Box\Box\Box.Android\bin\Debug\SqliteTutorial.Core.dll.mdb
-E:\IAB330\Box\Box\Box.Android\bin\Debug\SqliteTutorial.dll.mdb
-E:\IAB330\Box\Box\Box.Android\bin\Debug\SqliteTutorial.Android.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\SqliteTutorial.Android.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\SqliteTutorial.Core.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\SqliteTutorial.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-E:\IAB330\Box\Box\Box.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb

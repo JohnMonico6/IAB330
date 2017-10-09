@@ -9,7 +9,7 @@ using SqliteTutorial.Core.Models;
 namespace NUnit.UnitTests1
 {
     [TestFixture]
-    public partial class Package
+    public partial class AppTests
     {
 
         Package testPackage;
@@ -32,23 +32,23 @@ namespace NUnit.UnitTests1
         [Test]
         public void TestAddItem()
         {
-            List<Item> testList; //For holding manually generated items
-            List<Item> packageList; //For holding items added by the subject method
+            List<Item> testList = new List<Item>(); //For holding manually generated items
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
 
             //adding items to testList
-            testList.Add(new Item(Banana, 10));
-            testList.Add(new Item(Apple, 5));
-            testList.Add(new Item(Strawberry, 50));
+            testList.Add(new Item("Banana", 10));
+            testList.Add(new Item("Apple", 5));
+            testList.Add(new Item("Strawberry", 50));
 
 
             //adding items to packageList
             testPackage.AddItem(packageList, "Banana", 10);
             testPackage.AddItem(packageList, "Apple", 5);
-            Assert.AreNotSame(testList, packageList); // quick test to see if lists are currently not the same
             testPackage.AddItem(packageList, "Strawberry", 50);
 
+
             //asserting wether the two objects (Lists) are the same
-            Assert.AreSame(testList, packageList);
+            Assert.IsTrue(testList.Count() == packageList.Count());
         }
     }
 }
