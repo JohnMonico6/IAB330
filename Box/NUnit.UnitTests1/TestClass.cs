@@ -28,7 +28,7 @@ namespace NUnit.UnitTests1
             Assert.Pass("Your first passing test");
         }
 
-        //This method tests to see wether the method AddItem works correctly by comparing to a manually generated list
+        //This method tests to see wether the method AddItem from Package.cs works correctly by comparing to a manually generated list
         [Test]
         public void TestAddItem()
         {
@@ -44,11 +44,16 @@ namespace NUnit.UnitTests1
             //adding items to packageList
             testPackage.AddItem(packageList, "Banana", 10);
             testPackage.AddItem(packageList, "Apple", 5);
+            Assert.IsFalse(testList.Count() == packageList.Count()); //Quick test to see if the lists are unequal right now 3-2
             testPackage.AddItem(packageList, "Strawberry", 50);
 
 
-            //asserting wether the two objects (Lists) are the same
+            //asserting wether the two objects (Lists) are the same by checking that they both contain the same items /3 items each
             Assert.IsTrue(testList.Count() == packageList.Count());
+            Assert.IsTrue(3 == packageList.Count());
         }
+
+        //
+
     }
 }
