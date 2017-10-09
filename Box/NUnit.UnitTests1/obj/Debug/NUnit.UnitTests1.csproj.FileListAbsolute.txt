@@ -1,0 +1,2 @@
+E:\IAB330\Box\NUnit.UnitTests1\obj\Debug\NUnit.UnitTests1.csprojResolveAssemblyReference.cache
+E:\IAB330\Box\NUnit.UnitTests1\obj\Debug\NUnit.UnitTests1.csproj.CoreCompileInputs.cache
