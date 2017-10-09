@@ -18,26 +18,6 @@ C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial\SqliteTutorial\obj\Debug\
 C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial\SqliteTutorial\obj\Debug\SqliteTutorial.SecondPage.xaml.g.cs
 C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial\SqliteTutorial\obj\Debug\SqliteTutorial.dll
 C:\Users\Robert\Source\Repos\IAB330\Box\SqliteTutorial\SqliteTutorial\obj\Debug\SqliteTutorial.pdb
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.pdb
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.Core.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\SQLite.Net.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.Core.pdb
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\Box.csprojResolveAssemblyReference.cache
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\Box.csproj.CoreCompileInputs.cache
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.MainPage.xaml.g.cs
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.App.xaml.g.cs
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.SecondPage.xaml.g.cs
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.dll
-C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.pdb
 F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.dll
 F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.pdb
 F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box\Box\bin\Debug\SqliteTutorial.Core.dll
@@ -92,3 +72,15 @@ C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\Sqlit
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.ExportDatabasePage.xaml.g.cs
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.PackagePage.xaml.g.cs
 C:\Users\Jason\Desktop\Mobile\Assignment\repo\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.TransferItemPage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\Box.csprojResolveAssemblyReference.cache
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\Box.csproj.CoreCompileInputs.cache
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.MainPage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.App.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.tobedeleted.SecondPage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.AddPackagePage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.BrowsePackagePage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.QRScannerPage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.ExportDatabasePage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.PackagePage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.TransferItemPage.xaml.g.cs
+C:\Users\Robert\Source\Repos\IAB330\Box\Box\Box\obj\Debug\SqliteTutorial.Pages.PackageLabel.xaml.g.cs
