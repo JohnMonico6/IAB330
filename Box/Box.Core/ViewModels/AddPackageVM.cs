@@ -46,6 +46,8 @@ namespace SqliteTutorial.Core.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        
         public Item SelectedItem { get; set; }
         public ObservableCollection<Item> Items { get; set; }
         public ICommand SubmitCommand { protected set; get; }
@@ -71,12 +73,28 @@ namespace SqliteTutorial.Core.ViewModels
 
         public void AddItem()
         {
+            if (string.IsNullOrWhiteSpace(ItemName)) {
+                DisplayAlert("Error!", "Items must have a Name");
+                return;
+            }
+
             Items.Add(new Item(ItemName, 0));
             ItemName = String.Empty;
         }
 
         public void Submit()
         {
+
+            if (string.IsNullOrWhiteSpace(Name)) {
+                DisplayAlert("Error!", "Packages must have a Name");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(Room)) {
+                DisplayAlert("Error!", "Packages must have a Destination");
+                return;
+            }
+
             var p = new Package()
             {
                 Name = Name,
@@ -89,5 +107,10 @@ namespace SqliteTutorial.Core.ViewModels
             Room = String.Empty;
         }
 
+        public void DisplayAlert(string title, string message) {
+
+            string[] values = { title, message };
+            MessagingCenter.Send(this, "Display Alert", values);
+        }
     }
 }

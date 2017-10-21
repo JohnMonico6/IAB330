@@ -14,10 +14,11 @@ namespace SqliteTutorial {
     public partial class AddPackagePage : ContentPage {
 
         public AddPackagePage() {
-
+         
             InitializeComponent();
             BindingContext = new AddPackageVM();
         }
+
 
         public void AddButton_Clicked(object sender, EventArgs e)
         {
@@ -26,6 +27,20 @@ namespace SqliteTutorial {
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e) {
 
+        }
+
+        protected override void OnAppearing() {
+
+            base.OnAppearing();
+
+            MessagingCenter.Subscribe<AddPackageVM, string[]>(this, "Display Alert", (sender, values) => {
+                DisplayAlert(values[0], values[1], "Ok");
+            });
+        }
+
+        protected override void OnDisappearing() {
+
+            MessagingCenter.Unsubscribe<AddPackageVM, string[]>(this, "Display Alert");
         }
     }
 }
