@@ -2,9 +2,29 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteTutorial.App">
+
 	<Application.Resources>
 
-		<!-- Application resource dictionary -->
-
-	</Application.Resources>
+        <!-- Application resource dictionary #2f7ed6 -->
+        <ResourceDictionary>
+            <Style x:Key="buttonBlueStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2196f3"/>
+                <Setter Property="TextColor" Value="#ffffff"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BorderWidth" Value="4"/>
+                <Setter Property="BorderRadius" Value="20"/>
+            </Style>
+            <Style x:Key="buttonOrangeStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#fcb544"/>
+                <Setter Property="TextColor" Value="#000000"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="BorderWidth" Value="4"/>
+                <Setter Property="BorderRadius" Value="20"/>
+            </Style>
+            <Style x:Key="headerFontStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

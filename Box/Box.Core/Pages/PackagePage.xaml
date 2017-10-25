@@ -9,15 +9,15 @@
         <StackLayout Margin="20,10">
             <StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                    <Label Text="Destination" HorizontalOptions="StartAndExpand" Font="20" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
-                    <Button x:Name="EditDestinationButton" AutomationId="EditDestinationButton" Text="Edit Dest." 
+                    <Label Text="Destination" HorizontalOptions="StartAndExpand" Style="{StaticResource headerFontStyle}" VerticalOptions="CenterAndExpand"/>
+                    <Button x:Name="EditDestinationButton" AutomationId="EditDestinationButton" Style="{StaticResource buttonBlueStyle}" Text="Edit Dest." 
                             HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"  Clicked="EditDestinationButton_Clicked" />
                 </StackLayout>
-                <Label Text="{Binding Room}"/>
+                <Label Text="{Binding Room}" Margin="10,0"/>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="0,10,0,0">
-                    <Label Text="Photograph" HorizontalOptions="StartAndExpand" Font="20" FontAttributes="Bold" 
+                    <Label Text="Photograph" HorizontalOptions="StartAndExpand" Style="{StaticResource headerFontStyle}" 
                             VerticalOptions="CenterAndExpand"/>
-                    <Button x:Name="EditPhotographButton" AutomationId="EditPhotographButton" Text="Edit Photo" 
+                    <Button x:Name="EditPhotographButton" AutomationId="EditPhotographButton" Style="{StaticResource buttonBlueStyle}" Text="Edit Photo" 
                             HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Clicked="EditPhotographButton_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
@@ -25,9 +25,9 @@
                             Margin="20,0" WidthRequest="150" HeightRequest="150"></Image>
                     <Label Text="Click to Enlarge" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
                 </StackLayout>
-                <Button x:Name="GenerateLabelButton" AutomationId="GenerateLabelButton" Text="Generate Label" Command="{Binding GenerateLabelCommand}"
-                        HorizontalOptions="Center" Margin="0,10,0,0"/>
-                <Label Text="Contains" Font="20" FontAttributes="Bold" />
+                <Button x:Name="GenerateLabelButton" AutomationId="GenerateLabelButton"  Style="{StaticResource buttonBlueStyle}" 
+                        Text="Generate Label" Command="{Binding GenerateLabelCommand}" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Label Text="Contains" Style="{StaticResource headerFontStyle}" />
             </StackLayout>
             <ListView  x:Name="ItemsListView" ItemTapped="ItemsListView_ItemTapped" SeparatorVisibility="Default" RowHeight="50" ItemsSource="{Binding ItemList}">
                 <ListView.ItemTemplate>
@@ -41,10 +41,10 @@
                                         <ColumnDefinition Width="40"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Name}" Grid.Column="0" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
-                                    <Button x:Name="MoveItemButton" Grid.Column="1" AutomationId="MoveItemButton" Text=">" Clicked="MoveItemButton_Clicked"
-                                            HorizontalOptions="EndAndExpand"  WidthRequest="40" HeightRequest="40" />
-                                    <Button x:Name="DeleteItemButton" Grid.Column="2" AutomationId="DeleteItemButton" Text="-" Clicked="DeleteItemButton_Clicked"
-                                            HorizontalOptions="EndAndExpand" WidthRequest="40" HeightRequest="40"/> 
+                                    <Button x:Name="MoveItemButton" Grid.Column="1" AutomationId="MoveItemButton"  Style="{StaticResource buttonBlueStyle}"
+                                            Text=">" Clicked="MoveItemButton_Clicked" HorizontalOptions="EndAndExpand"  WidthRequest="40" HeightRequest="40" />
+                                    <Button x:Name="DeleteItemButton" Grid.Column="2" AutomationId="DeleteItemButton" Style="{StaticResource buttonBlueStyle}" 
+                                            Text="-" Clicked="DeleteItemButton_Clicked" HorizontalOptions="EndAndExpand" WidthRequest="40" HeightRequest="40"/> 
                                 </Grid>
                             </ViewCell.View>
                         </ViewCell>

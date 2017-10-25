@@ -6,24 +6,24 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="10" Spacing="5">
-                <Label Text="Package Name" />
+            <StackLayout Margin="10,20,10,10" Spacing="5">
+                <Label Text="Package Name"  Style="{StaticResource headerFontStyle}"/>
                 <Entry x:Name="PackageNameEntry" AutomationId="PackageNameEntry" Text="{Binding Name}"/>
-            
-                <Label Text="Destination"/>
+
+                <Label Text="Destination" Style="{StaticResource headerFontStyle}"/>
                 <Entry x:Name="DestinationEntry" AutomationId="DestinationEntry" Text="{Binding Room}"/>
 
-                <Label Text="Photograph"/>
+                <Label Text="Photograph" Style="{StaticResource headerFontStyle}"/>
                 <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">
-                    <Button x:Name="PhotoFileButton" Text="File"/>
+                    <Button x:Name="PhotoFileButton" Style="{StaticResource buttonBlueStyle}" Text="File"/>
                     <Label Text="or" VerticalTextAlignment="Center"/>
-                    <Button x:Name="PhotoCameraButton" Text="Camera"/>
+                    <Button x:Name="PhotoCameraButton" Style="{StaticResource buttonBlueStyle}" Text="Camera"/>
                 </StackLayout>
 
-                <Label Text="Package Contains"/>
+                <Label Text="Package Contains" Style="{StaticResource headerFontStyle}"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Entry x:Name="NewItemEntry" AutomationId="NewItemEntry" Text="{Binding ItemName, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
-                    <Button x:Name="AddItemButton" AutomationId="AddItemButton" Text="Add Item" Command="{Binding AddItemCommand}"/>
+                    <Button x:Name="AddItemButton" AutomationId="AddItemButton" Style="{StaticResource buttonBlueStyle}" Text="Add Item" Command="{Binding AddItemCommand}"/>
                 </StackLayout>
                 <StackLayout VerticalOptions="FillAndExpand">
                     <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
@@ -43,8 +43,8 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackLayout>
-                <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Text="Delete Item" Command="{Binding DeleteItemCommand}"/>
-                <Button x:Name="SubmitPackageButton" AutomationId="SubmitPackageButton" Text="Submit" Command="{Binding SubmitCommand}" Margin="0,20,0,0"/>
+                <Button x:Name="DeleteItemButton" AutomationId="DeleteItemButton" Style="{StaticResource buttonBlueStyle}" Text="Delete Item" Command="{Binding DeleteItemCommand}"/>
+                <Button x:Name="SubmitPackageButton" AutomationId="SubmitPackageButton" Style="{StaticResource buttonBlueStyle}" Text="Submit" Command="{Binding SubmitCommand}" Margin="0,0,0,10"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
