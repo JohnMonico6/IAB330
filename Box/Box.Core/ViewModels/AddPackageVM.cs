@@ -104,7 +104,7 @@ namespace SqliteTutorial.Core.ViewModels
             db.Insert(p);
             Items.Clear();
             Name = String.Empty;
-            Room = String.Empty;
+            Room = String.Empty;         
         }
 
         public void DisplayAlert(string title, string message) {

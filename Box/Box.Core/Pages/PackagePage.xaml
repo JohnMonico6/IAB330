@@ -34,7 +34,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <Grid Margin="10,0" >
+                                <Grid Margin="10,0" x:Name="Item">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="40"/>
@@ -44,7 +44,9 @@
                                     <Button x:Name="MoveItemButton" Grid.Column="1" AutomationId="MoveItemButton"  Style="{StaticResource buttonBlueStyle}"
                                             Text=">" Clicked="MoveItemButton_Clicked" HorizontalOptions="EndAndExpand"  WidthRequest="40" HeightRequest="40" />
                                     <Button x:Name="DeleteItemButton" Grid.Column="2" AutomationId="DeleteItemButton" Style="{StaticResource buttonBlueStyle}" 
-                                            Text="-" Clicked="DeleteItemButton_Clicked" HorizontalOptions="EndAndExpand" WidthRequest="40" HeightRequest="40"/> 
+                                            Text="-" Clicked="DeleteItemButton_Clicked" HorizontalOptions="EndAndExpand" WidthRequest="40" HeightRequest="40" 
+                                            BindingContext="{Binding Source={x:Reference ItemsListView}, Path=BindingContext}" Command="{Binding DeleteItem}" 
+                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/> 
                                 </Grid>
                             </ViewCell.View>
                         </ViewCell>

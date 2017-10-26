@@ -33,6 +33,13 @@ namespace SqliteTutorial.Core.Database
             database.Commit();
         }
 
+        public void DeleteItem(Package package) {
+
+            if (database.Table<Package>().Any(x => x.Id == package.Id)) {
+               database.Update(package);
+            }
+            database.Commit();
+        }
     }
 
     // TODO: Remove prac code

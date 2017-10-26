@@ -18,6 +18,9 @@ namespace SqliteTutorial.Core.ViewModels
     /// </summary>
     public class PackagePageVM : ViewModelBase
     {
+
+        private readonly PackageDatabase db;
+        private Package package;
         public string Name { get; set; }
         public string Room { get; set; }
         public ObservableCollection<Item> ItemList { get; set; }
@@ -27,6 +30,9 @@ namespace SqliteTutorial.Core.ViewModels
         {
             this.Navigation = navigation;
             this.GenerateLabelCommand = new Command(async () => await GenerateLabel(p));
+
+            db = new PackageDatabase();
+            package = p;
             Name = p.Name;
             Room = p.Room;
             //ItemList = new ObservableCollection<Item>();
@@ -41,6 +47,22 @@ namespace SqliteTutorial.Core.ViewModels
                 BindingContext = pvm
             };
             await Navigation.PushAsync(page);
+        }
+
+        public ICommand DeleteItem {
+
+            get {
+                return new Command((e) => {
+                    List<Item> tempList = new List<Item>(package.GetItemList());
+                    var item = (e as Item);
+
+                    ItemList.Remove(item);
+                    tempList.Remove(item);
+                    package.SetItemList(new List<Item>(ItemList));
+                    db.DeleteItem(package);
+                });
+            }
+            
         }
     }
 }
