@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SqliteTutorial.Core.Models;
 
 namespace NUnit.UnitTests1
 {
@@ -12,7 +13,6 @@ namespace NUnit.UnitTests1
     {
 
         Package testPackage;
-        SQLiteConnection database;
 
         [SetUp]
         public void Setup()
