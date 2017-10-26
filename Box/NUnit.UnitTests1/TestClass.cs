@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SqliteTutorial.Core.Models;
 
 namespace NUnit.UnitTests1
 {
@@ -13,11 +12,13 @@ namespace NUnit.UnitTests1
     {
 
         Package testPackage;
+        SQLiteConnection database;
 
         [SetUp]
         public void Setup()
         {
             testPackage = new Package();
+
         }
 
         //This is a sample test for reference purposes
@@ -53,7 +54,54 @@ namespace NUnit.UnitTests1
             Assert.IsTrue(3 == packageList.Count());
         }
 
-        //
+        //This method test to see wether the method AddItem from Package.cs allows an item with the name null (it shouldn't)
+        [Test]
+        public void TestNullAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            testPackage.AddItem(packageList, null, 1);
 
+            Assert.IsEmpty(packageList);
+        }
+
+        //This method test to see wether the method AddItem from Package.cs allows an item with an empty name (it shouldn't)
+        [Test]
+        public void TestEmptyNameAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            testPackage.AddItem(packageList, "", 1);
+
+            Assert.IsEmpty(packageList);
+        }
+
+        //This method test to see wether the method AddItem from Package.cs allows an item with an invalid name (numerical only, too few chars) (it shouldn't)
+        [Test]
+        public void TestNumericalNameAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            testPackage.AddItem(packageList, "1", 1);
+
+            Assert.IsEmpty(packageList);
+        }
+
+        //This method test to see wether the method AddItem from Package.cs allows an item with the amount 0 (it shouldn't)
+        [Test]
+        public void TestZeroCountAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            testPackage.AddItem(packageList, "Bananas", 0);
+
+            Assert.IsEmpty(packageList);
+        }
+
+        //This method test to see wether the method AddItem from Package.cs allows an item with the amount < 0 (it shouldn't)
+        [Test]
+        public void TestNegativeCountAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            testPackage.AddItem(packageList, "Bananas", -1);
+
+            Assert.IsEmpty(packageList);
+        }
     }
 }
