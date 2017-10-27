@@ -10,8 +10,8 @@
                 <Label Text="Package Name"  Style="{StaticResource headerFontStyle}"/>
                 <Entry x:Name="PackageNameEntry" AutomationId="PackageNameEntry" Text="{Binding Name}"/>
 
-                <Label Text="Destination" Style="{StaticResource headerFontStyle}"/>
-                <Entry x:Name="DestinationEntry" AutomationId="DestinationEntry" Text="{Binding Room}"/>
+                <Label Text="Room" Style="{StaticResource headerFontStyle}"/>
+                <Entry x:Name="RoomEntry" AutomationId="RoomEntry" Text="{Binding Room}"/>
 
                 <Label Text="Photograph" Style="{StaticResource headerFontStyle}"/>
                 <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">

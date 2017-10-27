@@ -53,11 +53,10 @@ namespace SqliteTutorial.Core.ViewModels
 
             get {
                 return new Command((e) => {
-                    List<Item> tempList = new List<Item>(package.GetItemList());
+
                     var item = (e as Item);
 
                     ItemList.Remove(item);
-                    tempList.Remove(item);
                     package.SetItemList(new List<Item>(ItemList));
                     db.DeleteItem(package);
                 });

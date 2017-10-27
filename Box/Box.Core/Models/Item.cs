@@ -8,7 +8,19 @@ namespace SqliteTutorial.Core.Models
 {
     public class Item
     {
-        public string Name { get; set; }
+        private string itemName;
+        public string Name {
+            get {
+                return itemName;
+            }
+            set {
+                if (string.IsNullOrWhiteSpace(value)) {
+                    throw new Exception("Items must have a Name");
+                }
+                itemName = value;
+            }      
+        }
+
         public int Quantity { get; set; }
         public Item(string Name, int Quantity)
         {

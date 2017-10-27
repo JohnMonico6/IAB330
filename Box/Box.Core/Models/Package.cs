@@ -14,9 +14,37 @@ namespace SqliteTutorial.Core.Models
         [PrimaryKey]
         [AutoIncrement]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Items { get; set; } // Serialized CSV
-        public string Room { get; set; }
+
+        private string packageName;
+        public string Name {
+            get {
+                return packageName;
+            }
+            set {
+                if (string.IsNullOrWhiteSpace(value)) {
+                    throw new Exception("Packages must have a Name");
+                }
+                packageName = value;
+            }
+        }
+
+        /*Can't figure out how to get this to work when handling exceptions. Because it's called from BrowsePackagePage, if there's ever a package without
+         an item in it, it will crash the app. Problem is, you can remove all the items from pacakges in PackagePage and create packages with no items in AddPackagePage.
+         */
+        public string Items { get; set; }
+
+        private string packageRoom;
+        public string Room {
+            get {
+                return packageRoom;
+            }
+            set {
+                if (string.IsNullOrWhiteSpace(value)) {
+                    throw new Exception("Packages must have a Room");
+                }
+                packageRoom = value;
+            }
+        }
 
         public List<Item> GetItemList()
         {

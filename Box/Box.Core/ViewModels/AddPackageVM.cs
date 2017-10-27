@@ -73,38 +73,31 @@ namespace SqliteTutorial.Core.ViewModels
 
         public void AddItem()
         {
-            if (string.IsNullOrWhiteSpace(ItemName)) {
-                DisplayAlert("Error!", "Items must have a Name");
-                return;
+            try {
+                Items.Add(new Item(ItemName, 0));
+                ItemName = String.Empty;
+            } catch (Exception e) {
+                DisplayAlert("Error!", e.Message);
             }
 
-            Items.Add(new Item(ItemName, 0));
-            ItemName = String.Empty;
         }
 
         public void Submit()
         {
+            try {
+                var p = new Package() {
+                    Name = Name,
+                    Room = Room
+                };
+                p.SetItemList(new List<Item>(Items));
+                db.Insert(p);
+                Items.Clear();
 
-            if (string.IsNullOrWhiteSpace(Name)) {
-                DisplayAlert("Error!", "Packages must have a Name");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(Room)) {
-                DisplayAlert("Error!", "Packages must have a Destination");
-                return;
-            }
-
-            var p = new Package()
-            {
-                Name = Name,
-                Room = Room
-            };
-            p.SetItemList(new List<Item>(Items));
-            db.Insert(p);
-            Items.Clear();
-            Name = String.Empty;
-            Room = String.Empty;         
+                Name = String.Empty;
+                Room = String.Empty;
+            } catch (Exception e) {
+                DisplayAlert("Error!", e.Message);
+            }   
         }
 
         public void DisplayAlert(string title, string message) {
