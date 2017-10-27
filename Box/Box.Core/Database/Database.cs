@@ -40,6 +40,11 @@ namespace SqliteTutorial.Core.Database
             }
             database.Commit();
         }
+
+        public string GetDatabase() {
+
+            return database.DatabasePath;
+        }
     }
 
     // TODO: Remove prac code
