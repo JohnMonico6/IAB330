@@ -103,5 +103,17 @@ namespace NUnit.UnitTests1
 
             Assert.IsEmpty(packageList);
         }
+
+        //This method test to see wether the method AddItem from Package.cs allows an item with the name null, exception throw expected
+        [Test]
+        public void TestNullAddItemException()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            TestDelegate addItem =  new TestDelegate(testPackage.AddItem(packageList, null, 1)); // *Up to here* Trying to get this line to work lel
+
+            Assert.Throws(typeof(ArgumentException), addItem);
+        }
+
+        //Testing all viewmodels and models (Item.cs, package.cs),
     }
 }
