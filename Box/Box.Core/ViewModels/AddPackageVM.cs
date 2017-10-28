@@ -14,7 +14,7 @@ namespace SqliteTutorial.Core.ViewModels
     public class AddPackageVM : ViewModelBase
     {
 
-        private readonly PackageDatabase db;
+         private readonly PackageDatabase db;
 
         private string name;
         public string Name
@@ -47,9 +47,21 @@ namespace SqliteTutorial.Core.ViewModels
             }
         }
 
+        private int height;
+        public int Height {
+            get {
+                return height;
+            }
+            set {
+                height = value;
+                OnPropertyChanged();
+            }
+        }
+
         
         public Item SelectedItem { get; set; }
         public ObservableCollection<Item> Items { get; set; }
+        public ICommand ChangeListViewSizeCommand { get; }
         public ICommand SubmitCommand { protected set; get; }
         public ICommand AddItemCommand { protected set; get; }
         public ICommand DeleteItemCommand { protected set; get; }
@@ -68,6 +80,7 @@ namespace SqliteTutorial.Core.ViewModels
             if (SelectedItem != null)
             {
                 Items.Remove(SelectedItem);
+                Height = (Items.Count * 45);
             }
         }
 
@@ -76,10 +89,10 @@ namespace SqliteTutorial.Core.ViewModels
             try {
                 Items.Add(new Item(ItemName, 0));
                 ItemName = String.Empty;
+                Height = (Items.Count * 45);
             } catch (Exception e) {
                 DisplayAlert("Error!", e.Message);
             }
-
         }
 
         public void Submit()
