@@ -1,13 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SqliteTutorial.Core.Models
 {
+
+    /// <summary>
+    /// Item
+    /// Treated like an item set, has a name and a quantity
+    /// </summary>
     public class Item
     {
+
+        /// <summary>
+        /// itemName
+        /// Can only be set to something that is readable
+        /// </summary>
         private string itemName;
         public string Name {
             get {
@@ -21,11 +27,24 @@ namespace SqliteTutorial.Core.Models
             }      
         }
 
+        /// <summary>
+        /// Quantity
+        /// The amount of this item
+        /// </summary>
         public int Quantity { get; set; }
+
+        /// <summary>
+        /// Constructor
+        /// Builds an item with the given name and quantity
+        /// </summary>
+        /// <param name="Name">The given name</param>
+        /// <param name="Quantity">The given quantity</param>
         public Item(string Name, int Quantity)
         {
             this.Name = Name;
             this.Quantity = Quantity;
         }
+
     }
+
 }

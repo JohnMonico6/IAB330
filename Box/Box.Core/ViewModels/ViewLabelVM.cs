@@ -11,14 +11,28 @@ using Xamarin.Forms;
 
 namespace SqliteTutorial.Core.ViewModels
 {
+
+    /// <summary>
+    /// View Model for LabelPage
+    /// </summary>
     public class ViewLabelVM : ContentView
     {
+
+        /// <summary>
+        /// Data bindings
+        /// </summary>
         public string Name { get; set; }
         public string Room { get; set; }
         public string Label { get; set; }
         public ObservableCollection<Item> ItemList { get; set; }
         public ICommand GenerateLabelCommand { protected set; get; }
         public INavigation Navigation { get; set; }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="navigation"></param>
+        /// <param name="p"></param>
         public ViewLabelVM(INavigation navigation, Package p)
         {
             //this.Navigation = navigation;
