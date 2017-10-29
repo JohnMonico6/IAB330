@@ -11,15 +11,27 @@ using Xamarin.Forms;
 
 namespace SqliteTutorial.Core.ViewModels
 {
+
+    /// <summary>
+    /// View Model for the BrowsePackagePage
+    /// TODO: Move search functionality here
+    /// </summary>
     public class BrowsePackageVM : ViewModelBase
     {
-        private readonly PackageDatabase db;
-        public ObservableCollection<Package> Packages { get; set; }
 
+        private readonly PackageDatabase db;
+
+        /// <summary>
+        /// Data bindings
+        /// </summary>
+        public ObservableCollection<Package> Packages { get; set; }
         public Item SelectedItem { get; set; }
         public ObservableCollection<Item> Items { get; set; }
 
-
+        /// <summary>
+        /// Constructor
+        /// Establishes a database link, shows all the Packages in a list
+        /// </summary>
         public BrowsePackageVM()
         {
 
@@ -29,4 +41,5 @@ namespace SqliteTutorial.Core.ViewModels
         }
 
     }
+
 }
