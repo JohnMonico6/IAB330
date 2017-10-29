@@ -12,32 +12,20 @@ using Xamarin.Forms;
 
 namespace SqliteTutorial.Core.ViewModels
 {
-    
     /// <summary>
-    /// View Model for the PackagePage
+    /// <code>PackagePageVM(Package p)</code>
     /// Binds to PackagePage.
     /// </summary>
     public class PackagePageVM : ViewModelBase
     {
 
         private readonly PackageDatabase db;
-
-        /// <summary>
-        /// Data bindings
-        /// </summary>
         private Package package;
         public string Name { get; set; }
         public string Room { get; set; }
         public ObservableCollection<Item> ItemList { get; set; }
         public ICommand GenerateLabelCommand { protected set; get; }
         public INavigation Navigation { get; set; }
-
-        /// <summary>
-        /// Constructor
-        /// General initialization
-        /// </summary>
-        /// <param name="navigation">Navigation object</param>
-        /// <param name="p">Package</param>
         public PackagePageVM(INavigation navigation, Package p)
         {
             this.Navigation = navigation;
@@ -51,13 +39,6 @@ namespace SqliteTutorial.Core.ViewModels
             ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
             //ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
         }
-
-        /// <summary>
-        /// GenerateLabel()
-        /// Generates a given label
-        /// </summary>
-        /// <param name="p">The package that the label will generate</param>
-        /// <returns></returns>
         public async Task GenerateLabel(Package p)
         {
             var pvm = new ViewLabelVM(Navigation, p);
@@ -68,10 +49,6 @@ namespace SqliteTutorial.Core.ViewModels
             await Navigation.PushAsync(page);
         }
 
-        /// <summary>
-        /// DeleteItem()
-        /// Removes the selected item
-        /// </summary>
         public ICommand DeleteItem {
 
             get {
@@ -86,7 +63,5 @@ namespace SqliteTutorial.Core.ViewModels
             }
             
         }
-
     }
-
 }

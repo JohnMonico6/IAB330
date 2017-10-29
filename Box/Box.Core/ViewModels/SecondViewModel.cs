@@ -11,7 +11,8 @@ namespace SqliteTutorial.Core.ViewModels
 {
     public class SecondViewModel : ViewModelBase
     {
-                private ObservableCollection<ToDoItem> toDoItems;
+        private readonly MyDatabase db;
+        private ObservableCollection<ToDoItem> toDoItems;
 
         public ObservableCollection<ToDoItem> ToDoItems
         {
@@ -23,8 +24,8 @@ namespace SqliteTutorial.Core.ViewModels
 
         public SecondViewModel()
         {
-      
-      
+            db = new MyDatabase();
+            ToDoItems = new ObservableCollection<ToDoItem>(db.GetAllToDoItems());
         }
     }
 }
