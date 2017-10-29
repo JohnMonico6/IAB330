@@ -5,6 +5,7 @@ using System.Linq;
 using SQLite.Net.Interop;
 using SQLite.Net;
 using Xamarin.Forms;
+using System;
 
 namespace SqliteTutorial.Core.Database
 {
@@ -46,6 +47,11 @@ namespace SqliteTutorial.Core.Database
         /// <param name="package">The package to insert</param>
         public void Insert(Package package)
         {
+           
+            if (database.Table<Package>().Any(x=> x.Name ==package.Name)) {
+                throw new Exception("There is already a Package with the name " + package.Name);
+            }
+
             database.Insert(package);
             database.Commit();
         }
