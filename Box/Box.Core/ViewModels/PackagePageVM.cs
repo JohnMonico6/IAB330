@@ -30,6 +30,8 @@ namespace SqliteTutorial.Core.ViewModels
         public string Room { get; set; }
         public ObservableCollection<Item> ItemList { get; set; }
         public ICommand GenerateLabelCommand { protected set; get; }
+        public ICommand MoveItemCommand { protected set; get; }
+        public ICommand OnAppearingCommand { set; get; }
         public INavigation Navigation { get; set; }
 
         /// <summary>
@@ -42,6 +44,8 @@ namespace SqliteTutorial.Core.ViewModels
         {
             this.Navigation = navigation;
             this.GenerateLabelCommand = new Command(async () => await GenerateLabel(p));
+            MoveItemCommand = new Command(MoveItem);
+            OnAppearingCommand = new Command(OnAppearing);
 
             db = new PackageDatabase();
             package = p;
@@ -50,6 +54,20 @@ namespace SqliteTutorial.Core.ViewModels
             //ItemList = new ObservableCollection<Item>();
             ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
             //ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
+        }
+
+        public void OnAppearing()
+        {
+            //
+        }
+
+        public void MoveItem(object i)
+        {
+            var mip = new MoveItemPage()
+            {
+                BindingContext = new MoveItemVM(Navigation,package, i as Item)
+            };
+            Navigation.PushAsync(mip);
         }
 
         /// <summary>

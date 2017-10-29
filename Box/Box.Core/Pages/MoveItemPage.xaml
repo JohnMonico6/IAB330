@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteTutorial.MoveItemPage">
+    <StackLayout Margin="15,10">
+        <ListView x:Name="PackagesListView" ItemsSource="{Binding Packages}" SelectedItem="{Binding SelectedPackage, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Room}" Margin="10,0"/>
+                                    <Label Text="{Binding Items}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
              x:Class="SqliteTutorial.PackagePage"
              Title="{Binding Name}">
-
+    <b:Interaction.Behaviors>
+        <b:BehaviorCollection>
+            <b:EventToCommand EventName="Appearing" Command="{Binding OnAppearingCommand}" />
+        </b:BehaviorCollection>
+    </b:Interaction.Behaviors>
     <ContentPage.Content>
         <ScrollView>
         <StackLayout Margin="20,10">
@@ -41,8 +46,11 @@
                                         <ColumnDefinition Width="40"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Name}" Grid.Column="0" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
-                                    <Button x:Name="MoveItemButton" Grid.Column="1" AutomationId="MoveItemButton"  Style="{StaticResource buttonBlueStyle}"
-                                            Text=">"  HorizontalOptions="EndAndExpand"  WidthRequest="40" HeightRequest="40" />
+                                    <Button x:Name="MoveItemButton"  Grid.Column="1" AutomationId="MoveItemButton"  Style="{StaticResource buttonBlueStyle}"
+                                        Command="{Binding MoveItemCommand}"
+                                        BindingContext="{Binding Source={x:Reference ItemsListView}, Path=BindingContext}"
+                                        CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                        Text=">"  HorizontalOptions="EndAndExpand"  WidthRequest="40" HeightRequest="40" />
                                     <Button x:Name="DeleteItemButton" Grid.Column="2" AutomationId="DeleteItemButton" Style="{StaticResource buttonBlueStyle}" 
                                             Text="-" HorizontalOptions="EndAndExpand" WidthRequest="40" HeightRequest="40" 
                                             BindingContext="{Binding Source={x:Reference ItemsListView}, Path=BindingContext}" Command="{Binding DeleteItem}" 

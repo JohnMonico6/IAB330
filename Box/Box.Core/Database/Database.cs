@@ -57,9 +57,24 @@ namespace SqliteTutorial.Core.Database
         }
 
         /// <summary>
+        /// Update(package)
+        /// Update a package in the database
+        /// </summary>
+        /// <param name="package">The package to update</param>
+        public void Update(Package package)
+        {
+            if (database.Table<Package>().Any(x => x.Id == package.Id))
+            {
+                database.Update(package);
+                database.Commit();
+            }
+        }
+
+        /// <summary>
         /// DeleteItem(package)
         /// Deletes a specified package, it must have an Id
         /// </summary>
+        /// 
         /// <param name="package"></param>
         public void DeleteItem(Package package, Item item) {
 

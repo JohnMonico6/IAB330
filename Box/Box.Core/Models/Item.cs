@@ -28,6 +28,16 @@ namespace SqliteTutorial.Core.Models
         }
 
         /// <summary>
+        /// Used to work more functionally within lists
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            return obj.GetType() == typeof(Item) ? String.Equals((obj as Item).Name,Name) : false;
+        }
+
+        /// <summary>
         /// Quantity
         /// The amount of this item
         /// </summary>

@@ -1,6 +1,4 @@
-﻿using SqliteTutorial.Core.Models;
-using SqliteTutorial.Core.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SqliteTutorial {
-
+namespace SqliteTutorial
+{
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PackagePage : ContentPage
+    public partial class MoveItemPage : ContentPage
     {
-
-        public PackagePage()
+        public MoveItemPage()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -65,6 +65,9 @@
     <Compile Include="Pages\QRScannerPage.xaml.cs">
       <DependentUpon>QRScannerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MoveItemPage.xaml.cs">
+      <DependentUpon>MoveItemPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TransferItemPage.xaml.cs">
       <DependentUpon>TransferItemPage.xaml</DependentUpon>
     </Compile>
@@ -76,11 +79,15 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BrowsePackageVM.cs" />
     <Compile Include="ViewModels\ExportDatabaseVM.cs" />
+    <Compile Include="ViewModels\MoveItemVM.cs" />
     <Compile Include="ViewModels\PackagePageVM.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
     <Compile Include="ViewModels\ViewLabelVM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Corcav.Behaviors, Version=2.3.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Corcav.Behaviors.2.3.7\lib\Corcav.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="CsvHelper, Version=1.0.0.37785, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
       <HintPath>..\packages\CsvHelper.1.0.0\lib\CsvHelper.dll</HintPath>
     </Reference>
@@ -159,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\LabelPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MoveItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
