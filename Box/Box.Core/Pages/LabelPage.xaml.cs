@@ -16,6 +16,9 @@ namespace SqliteTutorial {
 
         public LabelPage() {
             InitializeComponent();
+            ItemsListView.ItemSelected += (sender, e) => {
+                ((ListView)sender).SelectedItem = null;
+            };
         }
     }
 }

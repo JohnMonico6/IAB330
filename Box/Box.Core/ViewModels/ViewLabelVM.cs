@@ -24,13 +24,13 @@ namespace SqliteTutorial.Core.ViewModels
         {
             //this.Navigation = navigation;
             //this.GenerateLabelCommand = new Command(async () => await GenerateLabel(p));
-            Name = p.Name + " Label";
-            Title = p.Name + " package in " + p.Room;
-            //Room = p.Room;
+            Title = p.Name + " Label";
+            Name = p.Name;
+            Room = p.Room;
             //Label = p.Name + " - " + p.Room + " - " + p.Items;
             //ItemList = new ObservableCollection<Item>();
             ItemList = new ObservableCollection<Item>(p.GetItemList()); // Useful when we can actually put items within a package in the database
-            //ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see items
+            //ItemList.Add(new Item("Item Name", 0)); // Temporary so we can see 
         }
     }
 }
