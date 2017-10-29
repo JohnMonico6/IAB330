@@ -13,11 +13,13 @@ namespace NUnit.UnitTests1
     {
 
         Package testPackage;
+        Item itemClass;
 
         [SetUp]
         public void Setup()
         {
             testPackage = new Package();
+            itemClass = new Item("testingItem", 1);
         }
 
         //This is a sample test for reference purposes
@@ -27,6 +29,24 @@ namespace NUnit.UnitTests1
             // TODO: Add your test code here
             Assert.Pass("Your first passing test");
         }
+
+        //Tests to see if the get method in item.cs works correctly
+        [Test]
+        public void testItemGet()
+        {
+            string name = itemClass.Name;
+
+            StringAssert.AreEqualIgnoringCase(name, "testingItem");
+        }
+
+
+        //Tests to see if the set method in item.cs throws an exception when the name is empty
+        [Test]
+        public void testItemException()
+        {
+            Assert.That(() => itemClass = new Item("", 1), Throws.Exception);
+        }
+
 
         //This method tests to see wether the method AddItem from Package.cs works correctly by comparing to a manually generated list
         [Test]
@@ -53,7 +73,23 @@ namespace NUnit.UnitTests1
             Assert.IsTrue(3 == packageList.Count());
         }
 
-        //
+        //This method test to see wether the method AddItem from Package.cs throws an exception when the item name is null
+        [Test]
+        public void TestNullAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            Assert.That(() => testPackage.AddItem(packageList, null, 1), Throws.Exception);
+        }
+
+        //This method test to see wether the method AddItem from Package.cs throws an exception when the item name is empty ""
+        [Test]
+        public void TestEmptyNameAddItem()
+        {
+            List<Item> packageList = new List<Item>(); //For holding items added by the subject method
+            Assert.That(() => testPackage.AddItem(packageList, "", 1), Throws.Exception);
+        }
+
+
 
     }
 }

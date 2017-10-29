@@ -15,10 +15,14 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="AddPackageButton" AutomationId="AddPackageButton" Text="Add A Package" Grid.Row="0" Grid.Column="0"  HeightRequest = "175" Clicked="AddPackageButton_Clicked"/>
-            <Button x:Name="BrowsePackageButton" AutomationId="BrowsePackageButton" Text="Browse Packages" Grid.Row="0" Grid.Column="1" Clicked="BrowsePackageButton_Clicked"/>
-            <Button x:Name="QRScannerButton" AutomationId="QRScannerButton" Text="QR Scanner" Grid.Row="1" Grid.Column="0" Clicked="QRScannerButton_Clicked"/>
-            <Button x:Name="ExportDatabaseButton" AutomationId="ExportDatabaseButton" Text="Export Database" Grid.Row="1" Grid.Column="1" Clicked="ExportDatabaseButton_Clicked"/>
+            <Button x:Name="AddPackageButton" AutomationId="AddPackageButton" Style="{StaticResource buttonBlueStyle}" Text="Add A Package" Grid.Row="0" 
+                    Grid.Column="0"  HeightRequest = "175" Clicked="AddPackageButton_Clicked"/>
+            <Button x:Name="BrowsePackageButton" AutomationId="BrowsePackageButton" Style="{StaticResource buttonOrangeStyle}" Text="Browse Packages" Grid.Row="0" 
+                    Grid.Column="1" Clicked="BrowsePackageButton_Clicked"/>
+            <Button x:Name="QRScannerButton" AutomationId="QRScannerButton" Style="{StaticResource buttonOrangeStyle}" Text="QR Scanner" Grid.Row="1" 
+                    Grid.Column="0" Clicked="QRScannerButton_Clicked"/>
+            <Button x:Name="ExportDatabaseButton" AutomationId="ExportDatabaseButton" Style="{StaticResource buttonBlueStyle}" Text="Export Database" Grid.Row="1" 
+                    Grid.Column="1" Clicked="ExportDatabaseButton_Clicked"/>
         </Grid>
     </StackLayout>
 </ContentPage>

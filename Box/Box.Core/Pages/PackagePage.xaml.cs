@@ -17,29 +17,5 @@ namespace SqliteTutorial {
         public PackagePage() {
             InitializeComponent();
         }
-
-        private void EditDestinationButton_Clicked(object sender, EventArgs e) {
-
-        }
-
-        private void EditPhotographButton_Clicked(object sender, EventArgs e) {
-
-        }
-
-        private void GenerateLabelButton_Clicked(object sender, EventArgs e) {
-
-        }
-
-        private void ItemsListView_ItemTapped(object sender, ItemTappedEventArgs e) {
-
-        }
-
-        private void MoveItemButton_Clicked(object sender, EventArgs e) {
-
-        }
-
-        private void DeleteItemButton_Clicked(object sender, EventArgs e) {
-
-        }
     }
 }

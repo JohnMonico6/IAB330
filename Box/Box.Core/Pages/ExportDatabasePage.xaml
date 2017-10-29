@@ -5,6 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Export Database Page" />
+            <Button x:Name="ExportDatabaseButton" AutomationId="ExportDatabaseButton" Text="Export your Database" Style="{StaticResource buttonBlueStyle}"
+                    Command="{Binding ExportCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
