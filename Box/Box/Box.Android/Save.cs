@@ -19,6 +19,10 @@ using SqliteTutorial.Core.Database;
 namespace SqliteTutorial.Droid {
     class Save : ISave {
 
+        /// <summary>
+        /// takes database and creates a new directory for it then renames it to with date/time and saves to storage
+        /// </summary>
+        /// <param name="database">The database that will be written to storage</param>
         public void SaveFile(PackageDatabase database) {
 
             var appPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
