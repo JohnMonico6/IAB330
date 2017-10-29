@@ -1,101 +1,84 @@
-﻿using SQLite.Net;
-using SQLite.Net.Interop;
-using SqliteTutorial.Core.Interfaces;
+﻿using SqliteTutorial.Core.Interfaces;
 using SqliteTutorial.Core.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SQLite.Net.Interop;
+using SQLite.Net;
 using Xamarin.Forms;
+using System;
 
 namespace SqliteTutorial.Core.Database
 {
+    
+    /// <summary>
+    /// PackageDatabase
+    /// Manages the database connection, has methods to interact with the database
+    /// </summary>
     public class PackageDatabase
     {
+
         private SQLiteConnection database;
+        
+        /// <summary>
+        /// Constructor
+        /// Establishes a link to the SQLite database, creates a table of Packages if one exists
+        /// </summary>
         public PackageDatabase()
         {
             database = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(),
                 DependencyService.Get<IFileHelper>().GetLocalPath("Packages.db3"));
-            //database.DropTable<Package>();
             database.CreateTable<Package>();
         }
 
+        /// <summary>
+        /// GetPackages()
+        /// Returns all packages within the database
+        /// </summary>
+        /// <returns></returns>
         public List<Package> GetPackages()
         {
             return database.Table<Package>().ToList();
         }
 
+        /// <summary>
+        /// Insert(package)
+        /// Inserts a package into the database
+        /// </summary>
+        /// <param name="package">The package to insert</param>
         public void Insert(Package package)
         {
+           
+            if (database.Table<Package>().Any(x=> x.Name ==package.Name)) {
+                throw new Exception("There is already a Package with the name " + package.Name);
+            }
+
             database.Insert(package);
             database.Commit();
         }
 
+        /// <summary>
+        /// DeleteItem(package)
+        /// Deletes a specified package, it must have an Id
+        /// </summary>
+        /// <param name="package"></param>
         public void DeleteItem(Package package) {
 
             if (database.Table<Package>().Any(x => x.Id == package.Id)) {
-               database.Update(package);
+               database.Delete(package);
             }
             database.Commit();
         }
 
+        /// <summary>
+        /// GetDatabase()
+        /// Returns the database path
+        /// </summary>
+        /// <returns></returns>
         public string GetDatabase() {
 
             return database.DatabasePath;
         }
-    }
-
-    // TODO: Remove prac code
-    public class MyDatabase
-    {
-        static SQLiteConnection database;
-       
-        public MyDatabase()
-        {
-            database = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(), 
-                DependencyService.Get<IFileHelper>().GetLocalPath("ToDoSqlite.db3"));
-            database.CreateTable<ToDoItem>();
-        }
-
-        public int Insert(ToDoItem toDoItem)
-        {
-            var item = database.Insert(toDoItem);
-            database.Commit();
-            return item;
-
-        }
-
-        public int InsertOrUpdate(ToDoItem toDoItem)
-        {
-            int num;
-            if (database.Table<ToDoItem>().Any(x=> x.Id == toDoItem.Id))
-            {
-                num = database.Update(toDoItem);
-            }
-            num = database.Insert(toDoItem);
-            database.Commit();
-            return num;
-        }
-
-        public int Delete(ToDoItem toDoItem)
-        {
-            int num;
-            num = database.Delete<ToDoItem>(toDoItem.Id);
-            database.Commit();
-            return num;
-        }
-
-        public List<ToDoItem> GetAllToDoItems()
-        {
-            return database.Table<ToDoItem>().ToList();
-        }
-
-        public ToDoItem GetToDoItem(int key)
-        {
-            return database.Table<ToDoItem>().Where(x => x.Id == key).FirstOrDefault();
-        }
 
     }
+
 }
