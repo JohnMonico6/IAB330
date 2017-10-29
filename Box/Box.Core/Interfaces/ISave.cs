@@ -8,5 +8,6 @@ namespace SqliteTutorial.Core.Interfaces {
     public interface ISave {
 
         void SaveFile(SqliteTutorial.Core.Database.PackageDatabase database);
+        void exportAsCSV(SqliteTutorial.Core.Database.PackageDatabase database);
     }
 }

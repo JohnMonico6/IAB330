@@ -61,12 +61,15 @@ namespace SqliteTutorial.Core.Database
         /// Deletes a specified package, it must have an Id
         /// </summary>
         /// <param name="package"></param>
-        public void DeleteItem(Package package) {
+        public void DeleteItem(Package package, Item item) {
 
             if (database.Table<Package>().Any(x => x.Id == package.Id)) {
-               database.Delete(package);
+                List<Item> newList = new List<Item>();
+                newList = package.GetItemList();
+                newList.Remove(item);
+                package.SetItemList(newList);
             }
-            database.Commit();
+            database.Update(package);
         }
 
         /// <summary>

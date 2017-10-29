@@ -81,7 +81,7 @@ namespace SqliteTutorial.Core.ViewModels
 
                     ItemList.Remove(item);
                     package.SetItemList(new List<Item>(ItemList));
-                    db.DeleteItem(package);
+                    db.DeleteItem(package, item);
                 });
             }
             

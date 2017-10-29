@@ -24,6 +24,7 @@ namespace SqliteTutorial.Core.ViewModels {
         /// Data bindings
         /// </summary>
         public ICommand ExportCommand { protected set; get; }
+        public ICommand ExportCSVCommand { protected set; get; }
 
         /// <summary>
         /// Constructor
@@ -31,15 +32,20 @@ namespace SqliteTutorial.Core.ViewModels {
         /// </summary>
         public ExportDatabaseVM() {
             db = new PackageDatabase();
-            ExportCommand = new Command(ExportDatabase);
+            ExportCommand = new Command(BakckupDatabase);
+            ExportCSVCommand = new Command(ExportDatabaseAsCSV);
         }
 
         /// <summary>
         /// ExportDatabase()
         /// Exports the database to a flat file
         /// </summary>
-        public void ExportDatabase() {
+        public void BakckupDatabase() {
             DependencyService.Get<ISave>().SaveFile(db);
-        }  
+        }
+
+        public void ExportDatabaseAsCSV() {
+            DependencyService.Get<ISave>().exportAsCSV(db);
+    }
     }
 }

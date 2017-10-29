@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteTutorial.ExportDatabasePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Export Database Page" />
-            <Button x:Name="ExportDatabaseButton" AutomationId="ExportDatabaseButton" Text="Export your Database" Style="{StaticResource buttonBlueStyle}"
-                    Command="{Binding ExportCommand}"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Button x:Name="ExportDatabaseButton" AutomationId="ExportDatabaseButton" Text="Backup Database" Style="{StaticResource buttonBlueStyle}"
+                    Command="{Binding ExportCommand}" Margin="0,10"/>
+            <Button x:Name="ExportSCVButton" AutomationId="ExportSCVButton" Text="Export Database as CSV" Style="{StaticResource buttonBlueStyle}"
+                    Command="{Binding ExportCSVCommand}" Margin="0,10"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
