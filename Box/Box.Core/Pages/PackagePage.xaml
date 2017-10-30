@@ -4,11 +4,12 @@
              xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
              x:Class="SqliteTutorial.PackagePage"
              Title="{Binding Name}">
-    <b:Interaction.Behaviors>
+  <!--  <b:Interaction.Behaviors>
         <b:BehaviorCollection>
             <b:EventToCommand EventName="Appearing" Command="{Binding OnAppearingCommand}" />
         </b:BehaviorCollection>
     </b:Interaction.Behaviors>
+    -->
     <ContentPage.Content>
         <ScrollView>
         <StackLayout Margin="20,10">

@@ -46,6 +46,8 @@ namespace SqliteTutorial.Core.ViewModels
                 p2.SetItemList(items2);
                 db.Update(package);
                 db.Update(p2);
+                //remove the last two pacges in the nav stack and pop page (to BrowsePackagePage)
+                this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
                 Navigation.PopAsync();
             }
         }

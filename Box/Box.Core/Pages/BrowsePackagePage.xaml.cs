@@ -46,6 +46,11 @@ namespace SqliteTutorial {
 
             PackagesListView.EndRefresh();
         }
+
+        protected override void OnAppearing() {
+            base.OnAppearing();
+            BindingContext = new BrowsePackageVM();
+        }
     }
 
 }
