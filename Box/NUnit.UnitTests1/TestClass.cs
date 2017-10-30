@@ -32,21 +32,19 @@ namespace NUnit.UnitTests1
 
         //Tests to see if the get method in item.cs works correctly
         [Test]
-        public void testItemGet()
+        public void TestItemGet()
         {
             string name = itemClass.Name;
 
             StringAssert.AreEqualIgnoringCase(name, "testingItem");
         }
 
-
         //Tests to see if the set method in item.cs throws an exception when the name is empty
         [Test]
-        public void testItemException()
+        public void TestItemException()
         {
             Assert.That(() => itemClass = new Item("", 1), Throws.Exception);
         }
-
 
         //This method tests to see wether the method AddItem from Package.cs works correctly by comparing to a manually generated list
         [Test]
@@ -89,7 +87,32 @@ namespace NUnit.UnitTests1
             Assert.That(() => testPackage.AddItem(packageList, "", 1), Throws.Exception);
         }
 
+        //this method tests packageRoom in Package.cs to see if it throws an exception when the room name is whitespace
+        [Test]
+        public void TestWhiteSpaceRoomName()
+        {
+            Assert.That(() => testPackage.Room = "", Throws.Exception);
+        }
 
+        //this method tests packageRoom in Package.cs to see if it throws an exception when the room name is null
+        [Test]
+        public void TestNullRoomName()
+        {
+            Assert.That(() => testPackage.Room = null, Throws.Exception);
+        }
 
+        //this method tests packageRoom in Package.cs to see if it throws an exception when the Package name is whitespace
+        [Test]
+        public void TestWhiteSpacePackageName()
+        {
+            Assert.That(() => testPackage.Name = "", Throws.Exception);
+        }
+
+        //this method tests packageRoom in Package.cs to see if it throws an exception when the room name is null
+        [Test]
+        public void TestNullPackageName()
+        {
+            Assert.That(() => testPackage.Name = null, Throws.Exception);
+        }
     }
 }
