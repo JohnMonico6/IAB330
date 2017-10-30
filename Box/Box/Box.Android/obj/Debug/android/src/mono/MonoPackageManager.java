@@ -99,6 +99,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "SqliteTutorial.Android.dll" comes first in this list. */
 		"SqliteTutorial.Android.dll",
+		"CsvHelper.dll",
 		"FormsViewGroup.dll",
 		"SQLite.Net.dll",
 		"SQLite.Net.Platform.XamarinAndroid.dll",

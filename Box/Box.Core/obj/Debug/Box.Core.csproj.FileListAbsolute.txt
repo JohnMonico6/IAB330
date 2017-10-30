@@ -67,3 +67,33 @@ E:\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.tobedeleted.SecondPage.xaml
 E:\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.LabelPage.xaml.g.cs
 E:\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.dll
 E:\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.pdb
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\SqliteTutorial.Core.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\SqliteTutorial.Core.pdb
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\CsvHelper.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\nunit.framework.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\SQLite.Net.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Core.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Platform.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Xaml.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\CsvHelper.pdb
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\CsvHelper.xml
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\nunit.framework.xml
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Core.pdb
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Core.xml
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Platform.pdb
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Xaml.pdb
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\bin\Debug\Xamarin.Forms.Xaml.xml
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\Box.Core.csprojResolveAssemblyReference.cache
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.AddPackagePage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.BrowsePackagePage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.ExportDatabasePage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.MainPage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.PackagePage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.QRScannerPage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.TransferItemPage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.App.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.tobedeleted.SecondPage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.LabelPage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.Pages.MoveItemPage.xaml.g.cs
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.dll
+F:\Desktop\University\Uni 2017 Sem2\Mobile Dev\Assignment Two\IAB330\Box\Box.Core\obj\Debug\SqliteTutorial.Core.pdb
